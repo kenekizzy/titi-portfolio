@@ -1,3 +1,83 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.contactform {
+    color: #E2E2E2;
+}
+
+.contactform-header {
+    font-size: 26px;
+    margin-top: 50px;
+}
+hr {
+    width: 104px;
+    height: 3px;
+    background-color: #E2E2E2;
+    margin-top: 7px;
+    margin-bottom: 8px;
+}
+
+.text {
+    color: #B8B8B8;
+}
+
+span {
+    color: #E2E2E2;
+}
+
+.name-label {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.name-input {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px, 14px, 10px,14px;
+    border-radius: 8px;
+    width: 487px;
+    height: 44px;
+    border: 1px #484848;
+    color: #344054;
+    background-color: #E0D9FB;
+    gap: 8px;
+}
+
+.email-label {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.email-input {
+    margin-bottom: 20px;
+}
+
+.description-label {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.description-input {
+    margin-bottom: 20px;
+}
+
+textarea {
+    padding: 10px, 14px, 10px, 14px;
+    border-radius: 8px;
+    width: 487px;
+    height: 129px;
+    border: 1px #BBBBBB;
+    color: #344054;
+    background-color: #E0D9FB;
+}
+
+button {
+    text-align: center;
+    width: 488px;
+    height: 44px;
+    border-radius: 8px;
+    padding: 10px, 20px, 10px, 20px;
+    background-color: #6D3091;
+}
