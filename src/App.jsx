@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Project from './components/Project'
+import ContactForm from './components/ContactForm'
 import './App.css'
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Navbar />
       <Hero />
       <Project />
+      <ContactForm />
     </div>
   )
 }
