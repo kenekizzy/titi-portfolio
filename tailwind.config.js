@@ -31,7 +31,9 @@ export default {
         "hero-description": "#E4E4E4",
         'primary': "#ECEEFF",
         'hero-secondaryButton': '#6D3091',
-        'hero-primaryButton': ''
+        'hero-primaryButton': '',
+        'input-field-text': '#344054',
+        'input-field-background': '#E0D9FB'
       },
       borderRadius: {
         "card": "20px"

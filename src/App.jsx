@@ -2,6 +2,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Project from './components/Project'
 import ContactForm from './components/ContactForm'
+import PlayGround from './components/PlayGround'
 import './App.css'
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <Hero />
       <Project />
+      <PlayGround />
       <ContactForm />
     </div>
   )
