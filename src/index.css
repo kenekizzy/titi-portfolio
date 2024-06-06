@@ -104,3 +104,13 @@ span {
     justify-content: center;
     margin-top: 20px;
 }
+
+.footer-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    color: #B8B8B8;
+    font-size: 14px;
+    margin-top: 50px;
+}

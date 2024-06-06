@@ -6,11 +6,6 @@ const Project = () => {
         <h5>Selected Projects</h5>
         <div className='flex flex-col md:flex-row md:justify-around md:flex-wrap'>
             <ProjectCard />
-            <ProjectCard />
-            {/* <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard /> */}
         </div>
     </section>
   )
