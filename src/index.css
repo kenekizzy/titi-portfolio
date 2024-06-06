@@ -1,3 +1,106 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+span {
+    color: #FFFFFF;
+}
+
+.picture-frames {
+}
+
+.picture-frames img {
+    
+}
+
+/* .pic1 {
+    width: 174px;
+    height: 238px;
+}
+
+.pic2 {
+    width: 221px;
+    height: 238px;
+}
+
+.pic3 {
+    width: 174px;
+    height: 238px;
+}
+
+.pic4 {
+    width: 224px;
+    height: 238px;
+}
+
+.pic5 {
+    width: 175px;
+    height: 238px;
+}
+
+.pic6 {
+    width: 174px;
+    height: 238px;
+}
+
+.pic7 {
+    width: 174px;
+    height: 238px;
+}
+
+.pic8 {
+    width: 222px;
+    height: 238px;
+}
+
+.pic9 {
+    width: 178px;
+    height: 238px;
+}
+
+.pic10 {
+    width: 198px;
+    height: 238px;
+}
+
+.pic11 {
+    width: 180px;
+    height: 238px;
+} */
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.arrow-left {
+    left: 10px;
+}
+
+.arrow-right {
+    right: 10px;
+}
+
+.view-button {
+    padding: 10px, 20px, 10px, 20px;
+    border-radius: 8px;
+    width: 102px;
+    height: 44px;
+    color: #FFFFFF;
+    border: 1.5px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+
+}
+
+.button-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
