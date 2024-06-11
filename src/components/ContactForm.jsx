@@ -4,14 +4,15 @@ import InstagramIcon from '../assets/icons/instagram.svg'
 
 const ContactForm = () => {
   return (
-    <div className="bg-card bg-center bg-no-repeat mt-5 text-white">
+    <>
+    <div className="bg-center bg-no-repeat px-32 mt-5 text-white">
       <h2 className="font-normal text-2xl">Let us Connect</h2>
       <hr className='my-2 w-[104px] h-[3px]'/>
       <p className="font-normal text-lg w-[788px]">
         Fill out the form and you will get a response within the next 24hours, or reach out to me at 
         <span className="white-text font-semibold"> ebi.titi96@gmail.com</span>
       </p>
-      <div className='grid grid-cols-2'>
+      <div className='grid grid-cols-1 md:grid-cols-2'>
         <div className=''>
           <form className="">
             <div className='flex flex-col'>
@@ -38,7 +39,7 @@ const ContactForm = () => {
           </div>
           <div className="flex flex-row gap-4">
               <span className="inline-flex items-center font-normal text-base gap-3">
-                  <img className="w-6 h-6" src={DribbleIcon} alt="" /> Dribble
+                  <img className="w-6 h-6" src={DribbleIcon} alt="" /> Dribbble
               </span>
               <span className="inline-flex items-center font-normal text-base gap-3">
                   <img className="w-6 h-6" src={LinkedInIcon} alt="" /> LinkedIn
@@ -50,6 +51,11 @@ const ContactForm = () => {
         </div>
       </div>
     </div>
+    <hr className='border-1 mt-12 mb-4'/>
+    <div className='text-center pb-4 text-white'>
+      <h5>Copyright © 2024 Ebi Titi. All rights reserved</h5>
+    </div>
+    </>
   )
 }
 

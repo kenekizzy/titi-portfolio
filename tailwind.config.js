@@ -22,6 +22,9 @@ export default {
         palanquin: ['Palanquin', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
       },
+      animation: {
+        bounce: 'bounceOut 3s ease-in-out'
+      },
       colors: {
         'card-background': 'rgba(255, 255, 255, 0.08)',
         'card-heading': 'rgba(228, 194, 248, 0.56)',
@@ -61,6 +64,28 @@ export default {
       },
       screens: {
         "wide": "1440px"
+      },
+      keyframes: {
+        bounceOut: {
+         '0%':{ 
+          transform: 'scale(1.1)', 
+          opacity: '1',
+          backgroundColor: '#ff0000'
+          },
+          '20%': {
+            transform: 'scale(1)'
+          },
+          '50% 55%': {
+            opacity: '1',
+            transform: 'scale(1.1)',
+            backgroundColor: '#00ff00'
+          },
+          '100% ': {
+            opacity: '1',
+            transform: 'scale(1)',
+            backgroundColor: '#0000ff'
+          }
+        }
       }
     },
   },

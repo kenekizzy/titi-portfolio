@@ -3,7 +3,7 @@ import NightMode from '../assets/icons/night.svg'
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-between items-center py-3">
+    <nav className="flex justify-between items-center bg-portfolio px-32 py-3">
         <div className='flex justify-start items-start'>
             <img src={Logo} alt="logo" className='w-20 h-20' />
         </div>

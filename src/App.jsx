@@ -8,7 +8,7 @@ import './App.css'
 function App() {
 
   return (
-    <div className='container max-w-full bg-portfolio px-32 py-3'>
+    <div className='bg-card bg-no-repeat'>
       <Navbar />
       <Hero />
       <Project />
@@ -17,5 +17,7 @@ function App() {
     </div>
   )
 }
+
+// container max-w-full px-32 py-3
 
 export default App
