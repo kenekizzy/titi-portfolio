@@ -1,20 +1,32 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Project from './components/Project'
-import ContactForm from './components/ContactForm'
-import PlayGround from './components/PlayGround'
+import Home from './pages/Home'
+import About from './pages/About'
+import ProjectPage from './pages/ProjectPage'
+import PlaygroundPage from './pages/PlaygroundPage'
+import ProjectRouteHandler from './components/ProjectRouteHandler'
+import Contact from './pages/Contact'
 import './App.css'
 
 function App() {
 
   return (
-    <div className='bg-card bg-no-repeat'>
-      <Navbar />
-      <Hero />
-      <Project />
-      <PlayGround />
-      <ContactForm />
-    </div>
+
+    <>
+      <Router>
+        <div className='bg-card bg-no-repeat bg-cover'>
+          <Navbar />
+          <Routes>
+            <Route path='/' element={<Home />}/>
+            <Route path='/about' element={<About />}/>
+            <Route path='/project' element={<ProjectPage />}/>
+            <Route path='/project/:id' element={<ProjectRouteHandler />} />
+            <Route path='/playground' element={<PlaygroundPage />}/>
+            <Route path='/contact' element={<Contact />}/>
+          </Routes>
+        </div>
+      </Router>
+    </>
   )
 }
 

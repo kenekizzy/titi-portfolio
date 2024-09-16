@@ -21,6 +21,9 @@ export default {
       fontFamily: {
         palanquin: ['Palanquin', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
+        nb: ['NBInternational'],
+        workSans: ['WorkSans'],
+        ogg: ['Ogg']
       },
       animation: {
         bounce: 'bounceOut 3s ease-in-out'
@@ -36,7 +39,14 @@ export default {
         'hero-secondaryButton': '#6D3091',
         'hero-primaryButton': '',
         'input-field-text': '#344054',
-        'input-field-background': '#E0D9FB'
+        'input-field-background': '#E0D9FB',
+        'about-text': '#747474',
+        'navbar': "#AFAABA",
+        'project-heading': '#D7C8FC',
+        'project-primary': 'rgba(28, 21, 45, 1)',
+        'project-primary-fade': 'rgba(28, 21, 45, 0.9)',
+        'user-color': '#0D1A33'
+             
       },
       borderRadius: {
         "card": "20px"
@@ -44,7 +54,9 @@ export default {
       width: {
         "card-width": "560px",
         "hero-header": '543px',
-        'hero-description': '639px'
+        "mobile-hero-header": '340px', 
+        'hero-description': '639px',
+        'mobile-hero-description': '390px'
       },
       height: {
         "card-height": "740px"
@@ -60,7 +72,9 @@ export default {
         "navbar": "rgba(55, 43, 82, 0.78)",
         "ellipse": "#31264A",
         'primaryButton': "#6D3091",
-        'secondaryButton': '#EADAF3'
+        'secondaryButton': '#EADAF3',
+        "secondary-color": "rgba(238, 232, 253, 1)",
+        'live-button': '#2672A5'
       },
       screens: {
         "wide": "1440px"
