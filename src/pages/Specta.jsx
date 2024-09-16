@@ -26,7 +26,7 @@ const Specta = () => {
     <>
         <img src={Spectas} alt="" className='w-full' />  
 
-        <section className='container-custom my-8 px-4 md:px-0 text-white'>
+        <section className='container-custom my-8 px-4 md:px-24 text-white'>
             <h2 className='font-ogg font-bold text-5xl mb-6'>SPCTA</h2>
 
             <div className='overview my-4'>

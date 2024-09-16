@@ -69,11 +69,11 @@ import { useState } from 'react';
   
   return (
     <div className='bg-portfolio'>
-      <div className="container-custom pt-5 px-4 md:px-0  text-white">
+      <div className="container-custom pt-5 px-4 md:px-24 text-white">
         <h2 className="font-normal text-2xl font-nb">Playground</h2>
         <hr className='my-2 w-[104px] h-[3px]'/>
-        <p className="font-normal text-lg w-full md:w-[50%] font-nb leading-6 tracking-wide">
-          In my free time, I <span className="white-text">sketch</span> and I <span className="white-text">paint</span>. I also dabble into <span className="white-text">graphic work</span>, I love art in all forms and it helps my creativity , It also relaxes and refreshes the mind.
+        <p className="font-normal text-playground-color text-lg w-full md:w-[50%] leading-6 tracking-wide">
+          In my free time, I <span className="text-white">sketch</span> and I <span className="text-white">paint</span>. I also dabble into <span className="text-white">graphic work</span>, I love art in all forms and it helps my creativity , It also relaxes and refreshes the mind.
         </p>
         <div className="mt-2">
           <div className='flex justify-end items-end mb-2'>

@@ -8,10 +8,10 @@ import menopays from '../assets/images/menopays mockup.png'
 
 const Project = () => {
   return (
-    <section className='container-custom px-4 md:px-0 my-12 text-white'>
-       <h2 className="font-normal text-2xl">Selected Projects</h2>
+    <section className='container-custom px-4 md:px-24 my-12 text-white'>
+       <h2 className="font-normal text-2xl font-nb">Selected Projects</h2>
        <hr className='my-2 w-[104px] h-[3px]'/>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-x-8'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-x-16'>
             <ProjectCard projectName={'Aqualina'} projectDescription='A user-friendly e-commerce platform where customers can design and purchase personalized cards for various occasions. The platform offers a wide range of customiz...' projectImage={aqualina} available={true} />
             <ProjectCard projectName={'SPCTA'} projectDescription='This project addresses the pressing issue of plastic pollution in Nigeria by developing a comprehensive solution that simultaneously tackles unemployment, .rec...' projectImage={spcta} available={true}/>
             <ProjectCard projectName={'NairaCompare'} projectDescription='A user-friendly platform that simplifies the process of comparing financial products. Users can easily navigate through various savings and loan options offered by diff...' projectImage={NC} available={false}/>

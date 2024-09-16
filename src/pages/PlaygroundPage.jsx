@@ -41,9 +41,9 @@ const PlaygroundPage = () => {
   ]
   return (
     <div className='bg-portfolio'>
-      <div className='container-custom px-4 md:px-0 text-white'>
+      <div className='container-custom px-4 md:px-24 text-white'>
           <h2 className='flex font-bold text-[40px] mb-4'>Playground <span><img src={playgroundImage} alt="" className='w-16 h-16 ml-4'/></span></h2>
-          <p className='font-normal text-lg w-full md:w-[788px] font-nb leading-6 tracking-wide mb-6'>In my free time, I sketch and I paint. I also dabble into graphic work, I love art in all forms and it helps my creativity , It also relaxes and 
+          <p className='font-normal text-playground-color  text-2xl w-full md:w-[788px] font-nb leading-9 tracking-wide mb-6'>In my free time, I <span className='text-white'>sketch</span> and I <span className='text-white'>paint</span>. I also dabble into <span className='text-white'>graphic</span> work, I love art in all forms and it helps my creativity , It also relaxes and 
             refreshes the mind.</p>
           
           <div className='grid grid-cols-1 md:grid-cols-3 space-y-2 md:space-y-6 pb-24 grid-flow-dense'>
@@ -51,7 +51,7 @@ const PlaygroundPage = () => {
             <div key={index} className="flex flex-col items-center p-2">
               <img src={imageObj.image} alt={`Image ${index}`} className="w-full" />
               <div className="mt-2 flex justify-between w-full">
-                <span>{imageObj.imageName}</span>
+                <span className='font-normal text-xl text-white'>{imageObj.imageName}</span>
                 <span className="ml-2"><img src={imageObj.emoji} alt="" /></span>
               </div>
             </div>

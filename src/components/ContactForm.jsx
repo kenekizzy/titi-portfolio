@@ -5,12 +5,12 @@ import InstagramIcon from '../assets/icons/instagram.svg'
 const ContactForm = () => {
   return (
     <div className='bg-center bg-no-repeat'>
-      <div className="container-custom pt-5 px-4 md:px-0 text-white font-nb">
+      <div className="container-custom pt-5 px-4 md:px-24 text-white font-nb">
         <h2 className="font-normal text-2xl font-nb tracking-wide">Let us Connect</h2>
         <hr className='my-2 w-[104px] h-[3px]'/>
-        <p className="font-normal text-lg w-full md:w-[788px] tracking-wider">
+        <p className="font-normal text-lg text-playground-color w-full md:w-[55%] tracking-wider">
           Fill out the form and you will get a response within the next 24hours, or reach out to me at 
-          <span className="white-text font-semibold"> ebi.titi96@gmail.com</span>
+          <span className="text-white font-normal"> ebi.titi96@gmail.com</span>
         </p>
         <div className='grid grid-cols-1 md:grid-cols-2'>
           <div className=''>
@@ -35,9 +35,9 @@ const ContactForm = () => {
           <div className='flex flex-col justify-center items-start'>
             <div>
               <h5 className='font-normal text-3xl py-2'>Social</h5>
-              <p className='font-normal text-base pb-4'>Connect with me</p>
+              <p className='font-normal text-base pb-4 text-playground-color'>Connect with me</p>
             </div>
-            <div className="flex flex-row justify-between w-full">
+            <div className="flex flex-row justify-between  md:justify-start md:gap-x-8 w-full">
                 <span className="inline-flex items-center font-normal text-base gap-3">
                     <img className="w-6 h-6" src={DribbleIcon} alt="" /> Dribbble
                 </span>
@@ -51,8 +51,8 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
-      <hr className='border-1 mt-12 mb-4'/>
-      <div className='text-center pb-4 text-white'>
+      <hr className='border-1 mt-12 mb-4 border-playground-color'/>
+      <div className='text-center pb-4 text-playground-color'>
         <h5>Copyright © 2024 Ebi Titi. All rights reserved</h5>
       </div>
     </div>

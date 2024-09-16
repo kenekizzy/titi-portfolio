@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const ProjectCard = ({projectName, projectDescription, projectImage, available}) => {
   return (
-    <div className="bg-card-background border border-none my-8 rounded-md shadow-lg p-6 md:h-card-height hover:animate-bounce">
+    <div className="bg-card-background border border-none my-8 rounded-md shadow-lg p-6 md:h-card-height md:hover:animate-bounce">
           <div className=''>
             <div className="flex justify-between items-center">
                 <h2 className='font-medium text-[14px] md:text-base font-workSans text-card-heading'>WEBSITE</h2>

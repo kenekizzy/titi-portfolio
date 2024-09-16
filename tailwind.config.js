@@ -45,8 +45,8 @@ export default {
         'project-heading': '#D7C8FC',
         'project-primary': 'rgba(28, 21, 45, 1)',
         'project-primary-fade': 'rgba(28, 21, 45, 0.9)',
-        'user-color': '#0D1A33'
-             
+        'user-color': '#0D1A33',
+        'playground-color': '#B8B8B8'
       },
       borderRadius: {
         "card": "20px"

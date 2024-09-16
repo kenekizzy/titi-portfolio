@@ -12,19 +12,18 @@ const Navbar = () => {
   return (
     <>
         <div className='bg-portfolio'>
-            <nav className="flex justify-between items-center container-custom py-3 px-4 md:px-0">
+            <nav className="flex justify-between items-center container-custom py-3 px-4 md:px-24">
                 <div className='flex justify-start items-start'>
                     <img src={logo} alt="logo" className='w-20 h-20' />
                 </div>
 
                 <div className={`sm: hidden md:flex md:items-center md:space-x-4 ${isMenuOpen && 'hidden'} md:bg-navbar py-3 px-5 md:rounded-full`}>
-                        <ul className="flex flex-col md:flex-row justify-between items-center font-workSans list-none space-y-4 md:space-y-0 md:space-x-4 font-normal text-base text-white">
+                        <ul className="flex flex-col md:flex-row justify-between items-center font-workSans list-none space-y-4 md:space-y-0 md:space-x-8 font-normal text-base text-white">
                             <li>
                                 <NavLink to="/" exact
                                     className={({ isActive }) =>
                                         isActive ? 'font-normal text-base text-white font-workSans' : 'font-normal text-base text-navbar font-workSans'
                                     }>
-                                    <span className='w-1 h-1 bg-white rounded-full mr-2'></span>
                                     Home
                                 </NavLink>
                             </li>
