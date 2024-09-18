@@ -266,7 +266,7 @@ const AqualinaPage = () => {
 
         </section>  
 
-        <Project />
+        <Project available={false}/>
 
         <ContactForm />
     

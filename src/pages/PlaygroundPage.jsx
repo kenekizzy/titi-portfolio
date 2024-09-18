@@ -42,8 +42,8 @@ const PlaygroundPage = () => {
   return (
     <div className='bg-portfolio'>
       <div className='container-custom px-4 md:px-24 text-white'>
-          <h2 className='flex font-bold text-[40px] mb-4'>Playground <span><img src={playgroundImage} alt="" className='w-16 h-16 ml-4'/></span></h2>
-          <p className='font-normal text-playground-color  text-2xl w-full md:w-[788px] font-nb leading-9 tracking-wide mb-6'>In my free time, I <span className='text-white'>sketch</span> and I <span className='text-white'>paint</span>. I also dabble into <span className='text-white'>graphic</span> work, I love art in all forms and it helps my creativity , It also relaxes and 
+          <h2 className='flex font-bold text-[40px] mb-4 font-ogg'>Playground <span><img src={playgroundImage} alt="" className='w-16 h-16 ml-2'/></span></h2>
+          <p className='font-normal text-playground-color  text-2xl w-full md:w-[65%] leading-9 mb-6'>In my free time, I <span className='text-white'>sketch</span> and I <span className='text-white'>paint</span>. I also dabble into <span className='text-white'>graphic</span> work, I love art in all forms and it helps my creativity , It also relaxes and 
             refreshes the mind.</p>
           
           <div className='grid grid-cols-1 md:grid-cols-3 space-y-2 md:space-y-6 pb-24 grid-flow-dense'>

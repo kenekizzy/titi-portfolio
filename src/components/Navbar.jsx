@@ -13,8 +13,8 @@ const Navbar = () => {
     <>
         <div className='bg-portfolio'>
             <nav className="flex justify-between items-center container-custom py-3 px-4 md:px-24">
-                <div className='flex justify-start items-start'>
-                    <img src={logo} alt="logo" className='w-20 h-20' />
+                <div className='flex justify-center items-center w-28 h-16'>
+                    <img src={logo} alt="logo" className='w-full' />
                 </div>
 
                 <div className={`sm: hidden md:flex md:items-center md:space-x-4 ${isMenuOpen && 'hidden'} md:bg-navbar py-3 px-5 md:rounded-full`}>

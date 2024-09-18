@@ -50,7 +50,7 @@ import { useState } from 'react';
             {/* <div className="mt-2 block">
               <span>{imageObj.imageName}</span>
               <img src={imageObj.emoji} alt=""  className='ml-2'/> 
-            </div> */}
+            </div>  */}
           </>
         ));
       };

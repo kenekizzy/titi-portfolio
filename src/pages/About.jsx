@@ -8,7 +8,7 @@ const About = () => {
     <>
         <AboutHero />
         <Skills />
-        <Project />
+        <Project available={false}/>
         <ContactForm/>
     </>
   )

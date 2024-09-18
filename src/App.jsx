@@ -7,6 +7,8 @@ import PlaygroundPage from './pages/PlaygroundPage'
 import ProjectRouteHandler from './components/ProjectRouteHandler'
 import Contact from './pages/Contact'
 import './App.css'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -15,6 +17,7 @@ function App() {
     <>
       <Router>
         <div className='bg-card bg-no-repeat bg-cover'>
+          <ToastContainer />
           <Navbar />
           <Routes>
             <Route path='/' element={<Home />}/>

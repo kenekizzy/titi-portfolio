@@ -16,7 +16,7 @@ const Hero = () => {
                 </div>
             </div>
             <div className='sm:items-center'>
-                <img src={Heros} alt="hero-image" className='w-[364px] md:w-[620px] h-[364px] md:h-[608px]' />
+                <img src={Heros} alt="hero-image" className='w-[364px] md:w-[600px] h-[364px] md:h-[505px]' />
             </div>
         </section>
       </div>

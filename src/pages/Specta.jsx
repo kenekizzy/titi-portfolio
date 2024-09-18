@@ -396,7 +396,7 @@ const Specta = () => {
 
         </section>  
 
-        <Project />
+        <Project available={false}/>
 
         <ContactForm />
     
