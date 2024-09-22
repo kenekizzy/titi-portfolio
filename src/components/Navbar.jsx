@@ -1,7 +1,7 @@
 import logo from '../assets/icons/logo.svg'
 import NightMode from '../assets/icons/night.svg'
 import { NavLink } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,6 +9,17 @@ const Navbar = () => {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
+    useEffect(() => {
+        if (isMenuOpen) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = 'auto';
+        }
+        return () => {
+          document.body.style.overflow = 'auto';
+        };
+      }, [isMenuOpen]);
   return (
     <>
         <div className='bg-portfolio'>

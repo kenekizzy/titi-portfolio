@@ -45,17 +45,20 @@ const PlaygroundPage = () => {
           <h2 className='flex font-bold text-[40px] mb-4 font-ogg'>Playground <span><img src={playgroundImage} alt="" className='w-16 h-16 ml-2'/></span></h2>
           <p className='font-normal text-playground-color  text-2xl w-full md:w-[65%] leading-9 mb-6'>In my free time, I <span className='text-white'>sketch</span> and I <span className='text-white'>paint</span>. I also dabble into <span className='text-white'>graphic</span> work, I love art in all forms and it helps my creativity , It also relaxes and 
             refreshes the mind.</p>
-          
-          <div className='grid grid-cols-1 md:grid-cols-3 space-y-2 md:space-y-6 pb-24 grid-flow-dense'>
-          {images.map((imageObj, index) => (
-            <div key={index} className="flex flex-col items-center p-2">
-              <img src={imageObj.image} alt={`Image ${index}`} className="w-full" />
-              <div className="mt-2 flex justify-between w-full">
-                <span className='font-normal text-xl text-white'>{imageObj.imageName}</span>
-                <span className="ml-2"><img src={imageObj.emoji} alt="" /></span>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6 pb-24 grid-flow-row'>
+            {images.map((imageObj, index) => (
+              <div key={index} className="flex flex-col items-center p-2">
+                <img 
+                  src={imageObj.image} 
+                  alt={`Image ${index}`} 
+                  className="w-full" 
+                />
+                <div className="mt-2 flex justify-between w-full">
+                  <span className='font-normal text-xl text-white'>{imageObj.imageName}</span>
+                  <span className="ml-2"><img src={imageObj.emoji} alt="" /></span>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
           </div>
       </div>
     </div>

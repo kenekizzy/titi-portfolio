@@ -84,7 +84,7 @@ export default {
          '0%':{ 
           transform: 'scale(1.1)', 
           opacity: '1',
-          backgroundColor: '#ff0000'
+          backgroundColor: 'var(--bounce-start-bg, #ff0000)'
           },
           '20%': {
             transform: 'scale(1)'
@@ -92,12 +92,12 @@ export default {
           '50% 55%': {
             opacity: '1',
             transform: 'scale(1.1)',
-            backgroundColor: '#00ff00'
+            backgroundColor: 'var(--bounce-mid-bg, #ff0000)'
           },
           '100% ': {
             opacity: '1',
             transform: 'scale(1)',
-            backgroundColor: '#0000ff'
+            backgroundColor: 'var(--bounce-end-bg, #ff0000)'
           }
         }
       }
