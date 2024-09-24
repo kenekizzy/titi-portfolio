@@ -23,7 +23,8 @@ export default {
         montserrat: ['Montserrat', 'sans-serif'],
         nb: ['NBInternational'],
         workSans: ['WorkSans'],
-        ogg: ['Ogg']
+        ogg: ['Ogg'],
+        oggBook: ['OggBook']
       },
       animation: {
         bounce: 'bounceOut 3s ease-in-out'
@@ -66,6 +67,7 @@ export default {
       },
       backgroundImage: {
         'card': "url('assets/images/card-section.png')",
+        'contact-image': "url('assets/images/contac-form.png')"
       },
       backgroundColor: {
         "portfolio":  "rgba(28, 21, 45, 1)",

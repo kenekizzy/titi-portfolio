@@ -28,6 +28,10 @@
     font-family: 'Ogg';
     src: url('./fonts/OggText-Bold-BF646c18fc4aabb.ttf') format('truetype')
 }
+@font-face {
+    font-family: 'OggBook';
+    src: url('./fonts/OggText-Book-BF646c18fc52250.ttf') format('truetype')
+}
 
 .arrow {
     position: absolute;
