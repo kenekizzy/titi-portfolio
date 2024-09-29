@@ -76,7 +76,8 @@ export default {
         'primaryButton': "#6D3091",
         'secondaryButton': '#EADAF3',
         "secondary-color": "rgba(238, 232, 253, 1)",
-        'live-button': '#2672A5'
+        'live-button': '#2672A5',
+        'projects-color': '#1c152d'
       },
       screens: {
         "wide": "1440px"

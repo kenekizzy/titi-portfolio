@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import AqualinaPage from "../pages/AqualinaPage";
 import Specta from "../pages/Specta";
+import ComingSoon from "./ComingSoon";
 
 const ProjectRouteHandler = () => {
     const { id } = useParams();
@@ -10,6 +11,8 @@ const ProjectRouteHandler = () => {
     return <Specta />;
   } else if (id === 'Aqualina') {
     return <AqualinaPage />;
+  }else{
+    return <ComingSoon />
   }
 }
 

@@ -1,5 +1,5 @@
 import logo from '../assets/icons/logo.svg'
-import NightMode from '../assets/icons/night.svg'
+import HeaderIcon from '../assets/icons/header-icon.svg'
 import { NavLink } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <>
         <div className='bg-portfolio'>
-            <nav className="flex justify-between items-center container-custom py-8 px-4 md:px-24">
+            <nav className="flex justify-between items-center container-custom py-6 px-4 md:px-24 md:sticky">
                 <div className='flex justify-center items-center w-28 h-16'>
                     <img src={logo} alt="logo" className='w-full' />
                 </div>
@@ -33,41 +33,77 @@ const Navbar = () => {
                             <li>
                                 <NavLink to="/" exact
                                     className={({ isActive }) =>
-                                        isActive ? 'font-normal text-base text-white font-workSans' : 'font-normal text-base text-navbar font-workSans'
-                                    }>
+                                        `font-normal text-base font-workSans flex justify-center items-center ${
+                                          isActive ? 'text-white' : 'text-navbar'
+                                        }`
+                                      }>
+                                    {({ isActive }) => (
+                                    <>
+                                    {isActive && <div className="w-1 h-1 rounded-full bg-white mr-1"></div>}
                                     Home
+                                    </>
+                                )}
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to="/project" exact
                                     className={({ isActive }) =>
-                                        isActive ? 'font-normal text-base text-white font-workSans' : 'font-normal text-base text-navbar font-workSans'
-                                    }>
+                                        `font-normal text-base font-workSans flex justify-center items-center ${
+                                        isActive ? 'text-white' : 'text-navbar'
+                                        }`
+                                    }
+                                >
+                                {({ isActive }) => (
+                                    <>
+                                    {isActive && <div className="w-1 h-1 rounded-full bg-white mr-1"></div>}
                                     Projects
+                                    </>
+                                )}
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to="/playground" exact
                                     className={({ isActive }) =>
-                                        isActive ? 'font-normal text-base text-white font-workSans' : 'font-normal text-base text-navbar font-workSans'
-                                    }>
+                                        `font-normal text-base font-workSans flex justify-center items-center ${
+                                          isActive ? 'text-white' : 'text-navbar'
+                                        }`
+                                      }>
+                                    {({ isActive }) => (
+                                    <>
+                                    {isActive && <div className="w-1 h-1 rounded-full bg-white mr-1"></div>}
                                     Playground
+                                    </>
+                                )}
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to="/about" exact
                                     className={({ isActive }) =>
-                                        isActive ? 'font-normal text-base text-white font-workSans' : 'font-normal text-base text-navbar font-workSans'
-                                    }>
+                                        `font-normal text-base font-workSans flex justify-center items-center ${
+                                          isActive ? 'text-white' : 'text-navbar'
+                                        }`
+                                      }>
+                                    {({ isActive }) => (
+                                    <>
+                                    {isActive && <div className="w-1 h-1 rounded-full bg-white mr-1"></div>}
                                     About
+                                    </>
+                                )}
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to="/contact" exact
                                     className={({ isActive }) =>
-                                        isActive ? 'font-normal text-base text-white font-workSans' : 'font-normal text-base text-navbar font-workSans'
-                                    }>
+                                        `font-normal text-base font-workSans flex justify-center items-center ${
+                                          isActive ? 'text-white' : 'text-navbar'
+                                        }`
+                                      }>
+                                    {({ isActive }) => (
+                                    <>
+                                    {isActive && <div className="w-1 h-1 rounded-full bg-white mr-1"></div>}
                                     Contact
+                                    </>
+                                )}
                                 </NavLink>
                             </li>
                         </ul>
@@ -79,62 +115,88 @@ const Navbar = () => {
                             <li>
                             <NavLink to="/" exact
                                 className={({ isActive }) =>
-                                isActive ? 'font-normal text-4xl text-white font-workSans' : 'font-normal text-4xl text-navbar font-workSans'
+                                `font-normal text-4xl font-workSans flex items-center ${isActive ? 'text-white' : 'text-navbar'}`
                                 }
                                 onClick={() => setIsMenuOpen(false)}
                             >
-                                Home
+                                {({ isActive }) => (
+                                    <>
+                                    {isActive && <div className="w-1 h-1 rounded-full bg-white mr-1"></div>}
+                                    Home
+                                    </>
+                                )}
                             </NavLink>
                             </li>
                             <li>
                             <NavLink to="/project" exact
                                 className={({ isActive }) =>
-                                isActive ? 'font-normal text-4xl text-white font-workSans' : 'font-normal text-4xl text-navbar font-workSans'
-                                }
+                                    `font-normal text-4xl font-workSans flex items-center ${isActive ? 'text-white' : 'text-navbar'}`
+                                    }
                                 onClick={() => setIsMenuOpen(false)}
                             >
-                                Projects
+                                {({ isActive }) => (
+                                    <>
+                                    {isActive && <div className="w-1 h-1 rounded-full bg-white mr-1"></div>}
+                                    Projects
+                                    </>
+                                )}
                             </NavLink>
                             </li>
                             <li>
                             <NavLink to="/playground" exact
                                 className={({ isActive }) =>
-                                isActive ? 'font-normal text-4xl text-white font-workSans' : 'font-normal text-4xl text-navbar font-workSans'
-                                }
+                                    `font-normal text-4xl font-workSans flex items-center ${isActive ? 'text-white' : 'text-navbar'}`
+                                    }
                                 onClick={() => setIsMenuOpen(false)}
                             >
-                                Playground
+                                {({ isActive }) => (
+                                    <>
+                                    {isActive && <div className="w-1 h-1 rounded-full bg-white mr-1"></div>}
+                                    Playground
+                                    </>
+                                )}
                             </NavLink>
                             </li>
                             <li>
                             <NavLink to="/about" exact
                                 className={({ isActive }) =>
-                                isActive ? 'font-normal text-4xl text-white font-workSans' : 'font-normal text-4xl text-navbar font-workSans'
-                                }
+                                    `font-normal text-4xl font-workSans flex items-center ${isActive ? 'text-white' : 'text-navbar'}`
+                                    }
                                 onClick={() => setIsMenuOpen(false)}
                             >
-                                About
+                                {({ isActive }) => (
+                                    <>
+                                    {isActive && <div className="w-1 h-1 rounded-full bg-white mr-1"></div>}
+                                    About
+                                    </>
+                                )}
                             </NavLink>
                             </li>
                             <li>
                             <NavLink to="/contact" exact
                                 className={({ isActive }) =>
-                                isActive ? 'font-normal text-4xl text-white font-workSans' : 'font-normal text-4xl text-navbar font-workSans'
-                                }
+                                    `font-normal text-4xl font-workSans flex items-center ${isActive ? 'text-white' : 'text-navbar'}`
+                                    }
                                 onClick={() => setIsMenuOpen(false)}
                             >
-                                Contact
+                                {({ isActive }) => (
+                                    <>
+                                    {isActive && <div className="w-1 h-1 rounded-full bg-white mr-1"></div>}
+                                    Contact
+                                    </>
+                                )}
                             </NavLink>
                             </li>
                         </ul>
                 </div>
 
 
-                <div className='bg-ellipse p-2 w-10 h-10 rounded-full'>
-                    <img src={NightMode} alt="" />
+                <div className='hidden md:block'>
+                    <img src={HeaderIcon} alt="" />
                 </div>
 
-                <div className="md:hidden" onClick={toggleMenu}>
+                <div className="md:hidden flex justify-between gap-x-16" onClick={toggleMenu}>
+                    <img src={HeaderIcon} alt="" />
                     <button className="text-white focus:outline-none z-50">
                         {/* Hamburger icon */}
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

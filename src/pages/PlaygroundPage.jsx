@@ -23,6 +23,7 @@ import Trapped from '../assets/images/trapped.jpg'
 import trappedIcon from '../assets/icons/trapped.svg'
 import Universe from '../assets/images/universe.jpg'
 import universeIcon from '../assets/icons/crescent-moon.svg'
+import ContactForm from '../components/ContactForm'
 
 const PlaygroundPage = () => {
   const images = [
@@ -40,28 +41,32 @@ const PlaygroundPage = () => {
     { image: Universe, imageName: "The universe is one", emoji: universeIcon },
   ]
   return (
-    <div className='bg-portfolio'>
-      <div className='container-custom px-4 md:px-24 text-white'>
-          <h2 className='flex font-bold text-[40px] mb-4 font-ogg'>Playground <span><img src={playgroundImage} alt="" className='w-16 h-16 ml-2'/></span></h2>
-          <p className='font-normal text-playground-color  text-2xl w-full md:w-[65%] leading-9 mb-6 font-nb'>In my free time, I <span className='text-white'>sketch</span> and I <span className='text-white'>paint</span>. I also dabble into <span className='text-white'>graphic</span> work, I love art in all forms and it helps my creativity , It also relaxes and 
-            refreshes the mind.</p>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6 pb-24 grid-flow-row'>
-            {images.map((imageObj, index) => (
-              <div key={index} className="flex flex-col items-center p-2">
-                <img 
-                  src={imageObj.image} 
-                  alt={`Image ${index}`} 
-                  className="w-full" 
-                />
-                <div className="mt-2 flex justify-between w-full">
-                  <span className='font-normal text-xl text-white'>{imageObj.imageName}</span>
-                  <span className="ml-2"><img src={imageObj.emoji} alt="" /></span>
-                </div>
+    <>
+        <div className='bg-portfolio'>
+          <div className='container-custom px-4 md:px-24 py-12 text-white'>
+              <h2 className='flex font-bold text-4xl font-ogg'>Playground <span><img src={playgroundImage} alt="" className='w-16 h-16 ml-2 items-center'/></span></h2>
+              <p className='font-normal text-playground-color  text-xl w-full md:w-[70%] leading-9 mb-6 font-nb'>In my free time, I <span className='text-white'>sketch</span> and I <span className='text-white'>paint</span>. I also dabble into <span className='text-white'>graphic</span> work, I love art in all forms and it helps my creativity , It also relaxes and 
+                refreshes the mind.</p>
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 pb-24 grid-flow-row'>
+                {images.map((imageObj, index) => (
+                  <div key={index} className="flex flex-col items-center p-2">
+                    <img 
+                      src={imageObj.image} 
+                      alt={`Image ${index}`} 
+                      className="w-full" 
+                    />
+                    <div className="mt-2 flex justify-between w-full">
+                      <span className='font-normal text-xl text-white'>{imageObj.imageName}</span>
+                      <span className="ml-2"><img src={imageObj.emoji} alt="" /></span>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
           </div>
-      </div>
-    </div>
+        </div>
+    
+        <ContactForm />
+    </>
   )
 }
 

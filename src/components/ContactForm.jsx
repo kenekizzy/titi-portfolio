@@ -29,6 +29,7 @@ const ContactForm = () => {
             draggable: true,
             progress: undefined,
             theme: "colored",
+            style: { backgroundColor: '#2B9A66', color: '#fff' },
             });
          },
          (error) => {
@@ -44,6 +45,7 @@ const ContactForm = () => {
             draggable: true,
             progress: undefined,
             theme: "colored",
+            style: { backgroundColor: '#DC3E42', color: '#fff' },
             });
          },
        );
@@ -53,15 +55,15 @@ const ContactForm = () => {
 
   return (
     <div className='bg-center bg-no-repeat'>
-      <div className="container-custom pt-5 px-4 md:px-24 text-white font-nb">
-        <h2 className="font-normal text-2xl font-nb tracking-wide">Let us Connect</h2>
+      <div className="container-custom pt-16 md:pt-5 pb-0 md:pb-10 px-4 md:px-24 text-white font-nb">
+        <h2 className="font-normal text-2xl font-nb tracking-wide pt-0 md:pt-16">Let us Connect</h2>
         <hr className='my-2 w-[104px] h-[3px]'/>
-        <p className="font-normal text-lg text-playground-color w-full md:w-[55%] tracking-wide">
+        <p className="font-normal text-base md:text-lg leading-6 text-playground-color w-full md:w-[55%] tracking-wide">
           Fill out the form and you will get a response within the next 24 hours, or reach out to me at 
           <span className="text-white font-normal"> ebi.titi96@gmail.com</span>
         </p>
         <div className='grid grid-cols-1 md:grid-cols-2'>
-          <div className=''>
+          <div>
             <form className="" ref={form} onSubmit={handleSubmit} >
               <div className='flex flex-col'>
                 <label className='my-5 font-normal text-base'>Your name</label>
@@ -99,8 +101,8 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
-      <hr className='border-1 mt-12 mb-4 border-playground-color'/>
-      <div className='text-center pb-4 text-playground-color'>
+      <hr className='border-1 mt-12 mb-4 border-playground-color opacity-30'/>
+      <div className='text-center pb-4 text-playground-color font-normal text-sm'>
         <h5>Copyright © 2024 Ebi Titi. All rights reserved</h5>
       </div>
     </div>
