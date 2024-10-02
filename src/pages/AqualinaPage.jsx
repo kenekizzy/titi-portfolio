@@ -112,7 +112,7 @@ const AqualinaPage = () => {
                     </div>
                     <div className='flex-1'>
                       <h3 className='text-project-primary font-bold text-[22px] md:text-2xl mb-4 font-ogg'>Key Insights from Stakeholders Interview</h3>
-                      <ul className='list-disc list-inside ml-1 md:ml-3 leading-9 font-normal text-lg md:text-xl font-nb text-project-primary-fade space-y-2'>
+                      <ul className='list-disc list-inside ml-1 md:ml-3 leading-8 md:leading-9 font-normal text-lg md:text-xl font-nb text-project-primary-fade space-y-2'>
                         <li>The stakeholders aimed to enhance the resort experience by providing seamless booking, personalized recommendations, and exclusive benefits. </li>
                         <li>The membership program and community features foster a sense of belonging, which strengthens guest loyalty and customer retention.</li>
                         <li>Success is measured by metrics such as increased direct bookings, higher guest satisfaction scores, and improved guest retention rates.</li>
@@ -142,13 +142,13 @@ const AqualinaPage = () => {
                         
                         <div className="px-4">
                           <div className="mb-4">
-                            <h3 className="text-base md:text-lg font-semibold">About</h3>
-                            <p className="text-sm md:text-base font-normal leading-6">James loves attending events, hangouts, and experiencing new things with his friends. He's tech-savvy and always on the lookout for budget-friendly ways to enjoy high-end experiences.</p>
+                            <h3 className="text-base md:text-lg font-semibold text-user-color">About</h3>
+                            <p className="text-sm md:text-base font-normal leading-6 md:leading-7 text-body-color">James loves attending events, hangouts, and experiencing new things with his friends. He's tech-savvy and always on the lookout for budget-friendly ways to enjoy high-end experiences.</p>
                           </div>
                           
                           <div className="mb-4">
-                            <h3 className="text-base md:text-lg font-semibold">Goals</h3>
-                            <ul className="list-disc list-inside space-y-2 text-sm md:text-base">
+                            <h3 className="text-base md:text-lg font-semibold text-user-color">Goals</h3>
+                            <ul className="list-disc list-inside space-y-2 text-sm md:text-base leading-6 md:leading-7 text-body-color">
                               <li>Find affordable luxury hotels and experiences</li>
                               <li>Stay up-to-date with the latest events and happenings</li>
                               <li>Share his experiences on social media</li>
@@ -156,8 +156,8 @@ const AqualinaPage = () => {
                           </div>
                           
                           <div className="mb-4">
-                            <h3 className="text-base md:text-lg font-semibold">Behavioral patterns</h3>
-                            <ul className="list-disc list-inside space-y-2 text-sm md:text-base">
+                            <h3 className="text-base md:text-lg font-semibold text-user-color">Behavioral patterns</h3>
+                            <ul className="list-disc list-inside space-y-2 text-sm md:text-base leading-6 md:leading-7 text-body-color">
                               <li>Researches and compares prices online</li>
                               <li>Reads reviews and asks for recommendations from friends</li>
                               <li>Uses social media to discover new experiences and events</li>
@@ -165,8 +165,8 @@ const AqualinaPage = () => {
                           </div>
                           
                           <div className="mb-4">
-                            <h3 className="text-base md:text-lg font-semibold">Pain points</h3>
-                            <ul className="list-disc list-inside space-y-2 text-sm md:text-base">
+                            <h3 className="text-base md:text-lg font-semibold text-user-color">Pain points</h3>
+                            <ul className="list-disc list-inside space-y-2 text-sm md:text-base leading-6 md:leading-7 text-body-color">
                               <li>Limited budget for luxury experiences</li>
                               <li>Difficulty finding affordable options that meet his high standards</li>
                               <li>Frustrated by outdated travel websites and booking processes</li>
@@ -174,8 +174,8 @@ const AqualinaPage = () => {
                           </div>
                           
                           <div>
-                            <h3 className="text-base md:text-lg font-semibold">Recommendations</h3>
-                            <ul className="list-disc list-inside space-y-2 text-sm md:text-base">
+                            <h3 className="text-base md:text-lg font-semibold text-user-color">Recommendations</h3>
+                            <ul className="list-disc list-inside space-y-2 text-sm md:text-base leading-6 md:leading-7 text-body-color">
                               <li>Budget-friendly luxury hotel options</li>
                               <li>Personalized event and experience recommendations</li>
                               <li>User-friendly booking process with transparent pricing</li>
@@ -196,20 +196,20 @@ const AqualinaPage = () => {
                         
                         <div className="px-4">
                           <div className="mb-4">
-                            <h3 className="text-base md:text-lg font-semibold">About</h3>
-                            <p className="text-base font-normal leading-6">Alexandra values luxury, exclusivity privacy and discretion. She loves exploring new places and cultures both for leisure and business, seeking high-end experiences. She often struggles with finding the right accommodations that meet her needs and expectations. She is willing to pay premium for high-end experiences</p>
+                            <h3 className="text-base md:text-lg font-semibold text-user-color">About</h3>
+                            <p className="text-base font-normal leading-6 md:leading-7 text-body-color">Alexandra values luxury, exclusivity privacy and discretion. She loves exploring new places and cultures both for leisure and business, seeking high-end experiences. She often struggles with finding the right accommodations that meet her needs and expectations. She is willing to pay premium for high-end experiences</p>
                           </div>
                           
                           <div className="mb-4">
-                            <h3 className="text-base md:text-lg font-semibold">Goals</h3>
-                            <ul className="list-disc list-inside space-y-2 text-sm md:text-base">
+                            <h3 className="text-base md:text-lg font-semibold text-user-color">Goals</h3>
+                            <ul className="list-disc list-inside space-y-2 text-sm md:text-base leading-6 md:leading-7 text-body-color">
                               <li>Alexandra wants to book accommodations hassle-free and enjoy a comfortable and memorable stay during her visits</li>
                             </ul>
                           </div>
                           
                           <div className="mb-4">
-                            <h3 className="text-base md:text-lg font-semibold">Behavioral patterns</h3>
-                            <ul className="list-disc list-inside space-y-2 text-sm md:text-base">
+                            <h3 className="text-base md:text-lg font-semibold text-user-color">Behavioral patterns</h3>
+                            <ul className="list-disc list-inside space-y-2 text-sm md:text-base leading-6 md:leading-7 text-body-color">
                               <li>Conducts thorough research before booking hotels</li>
                               <li>Reads reviews and asks for referral from colleagues and clients</li>
                               <li>Compares price and amenities across multiple websites</li>
@@ -217,8 +217,8 @@ const AqualinaPage = () => {
                           </div>
                           
                           <div className="mb-4">
-                            <h3 className="text-base md:text-lg font-semibold">Pain points</h3>
-                            <ul className="list-disc list-inside space-y-2 text-sm md:text-base">
+                            <h3 className="text-base md:text-lg font-semibold text-user-color">Pain points</h3>
+                            <ul className="list-disc list-inside space-y-2 text-sm md:text-base leading-6 md:leading-7 text-body-color">
                               <li>Feeling stressed and overwhelmed by the endless options available online</li>
                               <li>Wasting time comparing prices and amenities of different hotels</li>
                               <li>Experiencing disappointment when the chosen hotel does not meet her expectations</li>
@@ -226,8 +226,8 @@ const AqualinaPage = () => {
                           </div>
                           
                           <div>
-                            <h3 className="text-base md:text-lg font-semibold">Recommendations</h3>
-                            <ul className="list-disc list-inside space-y-2 text-sm md:text-base">
+                            <h3 className="text-base md:text-lg font-semibold text-user-color">Recommendations</h3>
+                            <ul className="list-disc list-inside space-y-2 text-sm md:text-base leading-6 md:leading-7 text-body-color">
                               <li>Priority customer support</li>
                               <li>Personalized booking experience</li>
                               <li>Access to exclusive amenities and services</li>
@@ -265,7 +265,7 @@ const AqualinaPage = () => {
                   <p className='font-normal text-lg md:text-xl font-nb mb-4 leading-8 md:leading-9'>After creating the wireframes, I moved on to create the high-fidelity designs on Figma as well as prototype. I ensured I carried the stakeholders along during this process by scheduling a meeting bi-weekly after each  expected deliverable, this allowed for a fast feedback process. After each presentation, based off feedback from the stakeholders and product manager I iterated the designs and continued the feedback process until the stakeholders were satisfied with the deliverables.</p>
                   <div className='p-8 bg-white flex flex-col items-center rounded-lg my-4'>
                     <img src={aqualinaHifi} alt="" />
-                    <button className='flex justify-center text-center items-center py-3 px-0 md:px-5 font-workSans bg-live-button text-white border-none rounded-lg gap-0 w-full md:w-[250px] md:gap-2'>View Live Website <span><img src={Rocket} alt="" className='ml-2'/></span></button>
+                    <a href='https://aqualinabeachhouse.com' className='flex justify-center text-center items-center py-3 px-0 md:px-5 font-workSans bg-live-button text-white border-none rounded-lg gap-0 w-full md:w-[250px] md:gap-2'>View Live Website <span><img src={Rocket} alt="" className='ml-2'/></span></a>
                   </div>
                 </div>
 

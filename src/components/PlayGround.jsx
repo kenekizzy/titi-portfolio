@@ -69,7 +69,7 @@ import { useState } from 'react';
   
   return (
     <div className='bg-portfolio'>
-      <div className="container-custom pt-20 md:pt-5 px-4 md:px-24 text-white">
+      <div className="container-custom pt-20 pb-20 md:pb-6 md:pt-5 px-4 md:px-24 text-white">
         <h2 className="font-normal text-2xl font-nb pt-0 md:pt-16">Playground</h2>
         <hr className='my-2 w-[104px] h-[3px]'/>
         <p className="font-normal text-playground-color text-base md:text-lg w-full md:w-[65%] leading-6 tracking-wide font-nb pb-4 md:pb-10">

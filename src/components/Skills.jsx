@@ -13,7 +13,7 @@ import Ontres from '../assets/icons/ontres.svg'
 const Skills = () => {
   return (
     <div className='bg-portfolio'>
-        <section className='flex flex-col container-custom py-8 px-4 md:px-24  font-nb'>
+        <section className='flex flex-col container-custom py-0 md:py-8 px-4 md:px-24  font-nb'>
             <div className='bg-white p-8 rounded-lg'>
                 <div className='skill'>
                     <h1 className='font-bold text-3xl leading-9 my-2 font-ogg'>My Skills</h1>
@@ -89,47 +89,47 @@ const Skills = () => {
 
                     <div className="grid grid-cols-2 gap-4 mt-6">
                         <div className="rounded overflow-hidden border py-3 border-gray-300 bg-white">
-                            <img className="w-40 h-10 px-6" src={Suretree} alt="test" />
-                            <div className="px-6 py-4 space-y-3">
+                            <img className="w-40 h-10 px-2 md:px-6" src={Suretree} alt="test" />
+                            <div className="px-2 md:px-6 py-4 space-y-3">
                                 <div className="font-bold text-xl md:text-2xl font-ogg my-1">Suretree Systems</div>
-                                <div className="font-bold text-sm md:text-xl mb-2">Lead Product Designer</div>
-                                <p className="text-gray-700 text-sm md:text-base">May 2022 - Present</p>
+                                <div className="font-normal text-sm md:text-xl mb-2 font-nb">Lead Product Designer</div>
+                                <p className="text-gray-700 text-sm md:text-base font-normal font-nb">May 2022 - Present</p>
                             </div>
                         </div>
 
                         <div className="rounded overflow-hidden border py-3 border-gray-300 bg-white">
-                            <img className="w-40 h-10 px-6" src={Farmforte} alt="test" />
-                            <div className="px-6 py-4 space-y-3">
+                            <img className="w-40 h-10 px-2 md:px-6" src={Farmforte} alt="test" />
+                            <div className="px-2 md:px-6 py-4 space-y-3">
                                 <div className="font-bold text-xl md:text-2xl font-ogg my-1">Farmforte</div>
-                                <div className="font-bold text-sm md:text-xl mb-2">UI/UX Designer</div>
-                                <p className="text-gray-700 text-sm md:text-base">August 2021 - May 2022</p>
+                                <div className="font-normal font-nb text-sm md:text-xl mb-2">UI/UX Designer</div>
+                                <p className="text-gray-700 font-normal font-nb text-sm md:text-base">August 2021 - May 2022</p>
                             </div>
                         </div>
 
                         <div className="rounded overflow-hidden border py-3 border-gray-300 bg-white">
-                            <img className="w-40 h-10 px-6" src={Lucidray} alt="test" />
-                            <div className="px-6 py-4 space-y-3">
+                            <img className="w-40 h-10 px-2 md:px-6" src={Lucidray} alt="test" />
+                            <div className="px-2 md:px-6 py-4 space-y-3">
                                 <div className="font-bold text-xl md:text-2xl font-ogg my-1">Lucid Ray Limited</div>
-                                <div className="font-bold text-sm md:text-xl mb-2">UI/UX Designer</div>
-                                <p className="text-gray-700 text-sm md:text-base">April 2021 – August 2021</p>
+                                <div className="font-normal font-nb text-sm md:text-xl mb-2">UI/UX Designer</div>
+                                <p className="text-gray-700 font-normal font-nb text-sm md:text-base">April 2021 – August 2021</p>
                             </div>
                         </div>
 
                         <div className="rounded overflow-hidden border py-3 border-gray-300 bg-white">
-                            <img className="w-40 h-10 px-6" src={Hybr} alt="test" />
-                            <div className="px-6 py-4 space-y-3">
+                            <img className="w-40 h-10 px-2 md:px-6" src={Hybr} alt="test" />
+                            <div className="px-2 md:px-6 py-4 space-y-3">
                                 <div className="font-bold text-xl md:text-2xl font-ogg my-1">HYBR Group</div>
-                                <div className="font-bold text-sm md:text-xl mb-2">UI/UX Designer</div>
-                                <p className="text-gray-700 text-sm md:text-base">January 2021 – April 2021</p>
+                                <div className="font-normal font-nb text-sm md:text-xl mb-2">UI/UX Designer</div>
+                                <p className="text-gray-700 font-normal font-nb text-sm md:text-base">January 2021 – April 2021</p>
                             </div>
                         </div>
 
                         <div className="rounded overflow-hidden border py-3 border-gray-300 bg-white">
-                            <img className="w-40 h-10 px-6" src={Ontres} alt="test" />
-                            <div className="px-6 py-4 space-y-3">
+                            <img className="w-40 h-10 px-2 md:px-6" src={Ontres} alt="test" />
+                            <div className="px-2 md:px-6 py-4 space-y-3">
                                 <div className="font-bold text-xl md:text-2xl font-ogg my-1 text-wrap">Onteres Consulting</div>
-                                <div className="font-bold text-sm md:text-xl mb-2">UI/UX Designer</div>
-                                <p className="text-gray-700 text-sm md:text-base">November 2019 – December 2020</p>
+                                <div className="font-normal font-nb text-sm md:text-xl mb-2">UI/UX Designer</div>
+                                <p className="text-gray-700 font-nb font-normal text-sm md:text-base">November 2019 – December 2020</p>
                             </div>
                         </div>
                     </div>

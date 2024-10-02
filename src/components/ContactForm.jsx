@@ -63,7 +63,7 @@ const ContactForm = () => {
           <span className="text-white font-normal"> ebi.titi96@gmail.com</span>
         </p>
         <div className='grid grid-cols-1 md:grid-cols-2'>
-          <div>
+          <div className='pb-8 md:pb-0'>
             <form className="" ref={form} onSubmit={handleSubmit} >
               <div className='flex flex-col'>
                 <label className='my-5 font-normal text-base'>Your name</label>
@@ -91,10 +91,10 @@ const ContactForm = () => {
                 <a href='' className="inline-flex items-center font-normal text-base gap-3">
                     <img className="w-6 h-6" src={DribbleIcon} alt="" /> Dribbble
                 </a>
-                <a href='' className="inline-flex items-center font-normal text-base gap-3">
+                <a href='https://www.linkedin.com/in/arigbe-titi-26804815a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' className="inline-flex items-center font-normal text-base gap-3">
                     <img className="w-6 h-6" src={LinkedInIcon} alt="" /> LinkedIn
                 </a>
-                <a href='' className="inline-flex items-center font-normal text-base gap-3">
+                <a href='https://www.instagram.com/logic_mafia?igsh=MWxuZnZ5NnJhOWs3bQ%3D%3D&utm_source=qr' className="inline-flex items-center font-normal text-base gap-3">
                     <img className="w-6 h-6" src={InstagramIcon} alt="" /> Instagram
                 </a>
             </div>

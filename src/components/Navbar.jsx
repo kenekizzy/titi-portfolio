@@ -110,7 +110,7 @@ const Navbar = () => {
                     </div>
 
 
-                <div className={`p-4 fixed top-20 left-0 w-full h-full z-50 bg-portfolio transition-transform duration-300 ease-in-out ${isMenuOpen ? 'transform translate-x-0' : 'transform -translate-x-full'}`}>
+                <div className={`py-2 px-6 fixed top-20 left-0 w-full h-full z-50 bg-portfolio transition-transform duration-300 ease-in-out ${isMenuOpen ? 'transform translate-x-0' : 'transform -translate-x-full'}`}>
                         <ul className="flex flex-col font-workSans list-none space-y-8 font-normal text-base text-white">
                             <li>
                             <NavLink to="/" exact
@@ -121,7 +121,7 @@ const Navbar = () => {
                             >
                                 {({ isActive }) => (
                                     <>
-                                    {isActive && <div className="w-1 h-1 rounded-full bg-white mr-1"></div>}
+                                    {isActive && <div className="w-2 h-2 rounded-full bg-white mr-1"></div>}
                                     Home
                                     </>
                                 )}
@@ -136,7 +136,7 @@ const Navbar = () => {
                             >
                                 {({ isActive }) => (
                                     <>
-                                    {isActive && <div className="w-1 h-1 rounded-full bg-white mr-1"></div>}
+                                    {isActive && <div className="w-2 h-2 rounded-full bg-white mr-1"></div>}
                                     Projects
                                     </>
                                 )}
@@ -151,7 +151,7 @@ const Navbar = () => {
                             >
                                 {({ isActive }) => (
                                     <>
-                                    {isActive && <div className="w-1 h-1 rounded-full bg-white mr-1"></div>}
+                                    {isActive && <div className="w-2 h-2 rounded-full bg-white mr-1"></div>}
                                     Playground
                                     </>
                                 )}
@@ -166,7 +166,7 @@ const Navbar = () => {
                             >
                                 {({ isActive }) => (
                                     <>
-                                    {isActive && <div className="w-1 h-1 rounded-full bg-white mr-1"></div>}
+                                    {isActive && <div className="w-2 h-2 rounded-full bg-white mr-1"></div>}
                                     About
                                     </>
                                 )}
@@ -181,7 +181,7 @@ const Navbar = () => {
                             >
                                 {({ isActive }) => (
                                     <>
-                                    {isActive && <div className="w-1 h-1 rounded-full bg-white mr-1"></div>}
+                                    {isActive && <div className="w-2 h-2 rounded-full bg-white mr-1"></div>}
                                     Contact
                                     </>
                                 )}
@@ -195,15 +195,20 @@ const Navbar = () => {
                     <img src={HeaderIcon} alt="" />
                 </div>
 
-                <div className="md:hidden flex justify-between gap-x-16" onClick={toggleMenu}>
-                    <img src={HeaderIcon} alt="" />
-                    <button className="text-white focus:outline-none z-50">
-                        {/* Hamburger icon */}
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}></path>
-                        </svg>
-                    </button>
+                <div className='md:hidden flex justify-between gap-x-10'>
+                    <img src={HeaderIcon} alt="" className='w-10 h-10' />
+
+                    <div onClick={toggleMenu}>
+                        <button className="text-white focus:outline-none z-50">
+                            {/* Hamburger icon */}
+                            <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}></path>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
+
+                
             </nav>
 
         </div>

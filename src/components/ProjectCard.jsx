@@ -39,7 +39,7 @@ const ProjectCard = ({projectName, projectDescription, projectImage, available, 
           )}
         </div>
 
-        <div className="mb-8 space-y-4">
+        <div className="mt-2 md:mt-0 mb-8 space-y-4">
           <h3 className="font-normal text-[28px] md:text-4xl tracking-wide text-white font-oggBook">
             {projectName}
           </h3>
@@ -49,7 +49,7 @@ const ProjectCard = ({projectName, projectDescription, projectImage, available, 
 
           {available ? (
             <Link to={`/project/${projectName}`}>
-              <p className="font-normal cursor-pointer text-base md:text-lg text-white inline-flex font-nb mt-3">
+              <p className="font-normal cursor-pointer text-base md:text-lg text-white inline-flex font-nb mt-6 md:mt-3">
                 See my work{' '}
                 <span className="inline mt-0 md:mt-1 mx-3">
                   <img src={vectorIcon} alt="vectorIcon" />
@@ -57,7 +57,7 @@ const ProjectCard = ({projectName, projectDescription, projectImage, available, 
               </p>
             </Link>
           ) : (
-            <p className="font-normal text-base md:text-lg text-white inline-flex font-nb mt-3">
+            <p className="font-normal text-base md:text-lg text-white inline-flex font-nb mt-6 md:mt-3">
               See my work{' '}
               <span className="inline mt-1 mx-3">
                 <img src={vectorIcon} alt="vectorIcon" />
