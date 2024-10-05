@@ -44,16 +44,16 @@ const PlaygroundPage = () => {
     <>
         <div className='bg-portfolio'>
           <div className='container-custom px-4 md:px-24 py-12 text-white'>
-              <h2 className='flex font-bold text-4xl font-ogg'>Playground <span><img src={playgroundImage} alt="" className='w-16 h-16 ml-2 items-center'/></span></h2>
-              <p className='font-normal text-playground-color  text-xl w-full md:w-[70%] leading-9 mb-6 font-nb'>In my free time, I <span className='text-white'>sketch</span> and I <span className='text-white'>paint</span>. I also dabble into <span className='text-white'>graphic</span> work, I love art in all forms and it helps my creativity , It also relaxes and 
+              <h2 className='flex font-bold text-4xl font-ogg pb-4 md:pb-0'>Playground <span><img src={playgroundImage} alt="" className='w-10 md:w-16 h-10 md:h-16 ml-2 items-center'/></span></h2>
+              <p className='font-normal text-playground-color  text-xl w-full md:w-[70%] leading-9 mb-6 font-nb pb-4 md:pb-0'>In my free time, I <span className='text-white'>sketch</span> and I <span className='text-white'>paint</span>. I also dabble into <span className='text-white'>graphic</span> work, I love art in all forms and it helps my creativity , It also relaxes and 
                 refreshes the mind.</p>
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 pb-24 grid-flow-row'>
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 pb-12 md:pb-24 grid-flow-row'>
                 {images.map((imageObj, index) => (
                   <div key={index} className="flex flex-col items-center p-2">
                     <img 
                       src={imageObj.image} 
                       alt={`Image ${index}`} 
-                      className="w-full" 
+                      className="w-full h-full pb-2 md:pb-0" 
                     />
                     <div className="mt-2 flex justify-between w-full">
                       <span className='font-normal text-xl text-white'>{imageObj.imageName}</span>

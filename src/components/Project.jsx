@@ -9,9 +9,9 @@ import menopays from '../assets/images/menopays mockup.png'
 
 const Project = ({ available = true }) => {
   return (
-    <section className='container-custom px-4 md:px-24 my-12 text-white'>
+    <section className={`container-custom px-4 md:px-24 ${available? 'my-12' : 'my-6'} text-white`}>
        <h2 className={`font-normal text-2xl ${available ? 'font-nb': 'font-ogg'}`}>{available ? 'Selected ' : 'Other '} Projects</h2>
-       <hr className='my-2 w-[104px] h-[3px]'/>
+       <hr className='my-2 w-[104px] h-[3px] border-2 rounded-full'/>
         {available && <div className='grid grid-cols-1 md:grid-cols-2 gap-x-16'>
             <ProjectCard projectName={'Aqualina'} projectDescription='A user-friendly e-commerce platform where customers can design and purchase personalized cards for various occasions. The platform offers a wide range of customiz...' projectImage={aqualina} available={true} version='website' />
             <ProjectCard projectName={'SPCTA'} projectDescription='This project addresses the pressing issue of plastic pollution in Nigeria by developing a comprehensive solution that simultaneously tackles unemployment, .rec...' projectImage={spcta} available={true} version='mobile app'/>

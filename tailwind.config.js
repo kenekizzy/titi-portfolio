@@ -47,6 +47,7 @@ export default {
         'project-primary': 'rgba(28, 21, 45, 1)',
         'project-primary-fade': 'rgba(28, 21, 45, 0.9)',
         'user-color': '#0D1A33',
+        'user-color-opacity': 'rgba(13, 26, 51, 0.8)',
         'body-color': '#3d485c',
         'playground-color': '#B8B8B8'
       },
@@ -68,7 +69,8 @@ export default {
       },
       backgroundImage: {
         'card': "url('assets/images/card-section.png')",
-        'contact-image': "url('assets/images/contac-form.png')"
+        'contact-image': "url('assets/images/contac-form.png')",
+        'coming-soon': "url('assets/images/coming-soon.png')"
       },
       backgroundColor: {
         "portfolio":  "rgba(28, 21, 45, 1)",

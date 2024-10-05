@@ -1,5 +1,7 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-irregular-whitespace */
+import { useState } from 'react'
 import Aqualinas from '../assets/images/aqualina-logo.png'
 import figmaIcon from '../assets/icons/figma-icon.svg'
 import excelIcon from '../assets/icons/excel.svg'
@@ -19,6 +21,33 @@ import Alexandra from '../assets/images/alexandra.png'
 
 
 const AqualinaPage = () => {
+
+  const ReadMore = ({ children }) => {
+    const text = children;
+    const [isReadMore, setIsReadMore] = useState(true);
+    const toggleReadMore = () => {
+        setIsReadMore(!isReadMore);
+    };
+    return (
+      <p className='font-nb font-normal text-lg md:text-xl leading-8 md:leading-9 py-4 md:py-2'>
+          <span className="block md:hidden">
+              {isReadMore ? text.slice(0, 200) : text}
+              <span
+                  onClick={toggleReadMore}
+                  className="read-or-hide"
+                  style={{ color: "rgb(215 200 252)" }}
+              >
+                  {isReadMore ? "...read more" : " show less"}
+              </span>
+          </span>
+          
+          <span className="hidden md:block">
+              {text}
+          </span>
+      </p>
+    );
+};
+
   return (
     <>
         <img src={Aqualinas} alt="" className='w-full' />  
@@ -29,14 +58,14 @@ const AqualinaPage = () => {
 
                 <div className='overview my-1 md:my-4'>
                     <h4 className='font-ogg font-bold text-2xl md:text-3xl'>Overview</h4>
-                    <hr className='mt-1 mb-2 w-[114px] h-[3px] text-[#E8DEFF] opacity-30 rounded-sm'/>
+                    <hr className='mt-1 mb-2 w-[88px] md:w-[114px] h-[3px] text-[#E8DEFF] opacity-30 rounded-full border-2'/>
 
-                    <p className='font-nb font-normal text-lg md:text-xl leading-8 md:leading-9 my-2'>Aqualina is a website that allows users to make hotel reservations as members of the elite beach resort (Aqualina). 
+                    <ReadMore>Aqualina is a website that allows users to make hotel reservations as members of the elite beach resort (Aqualina). 
                         This project focused on creating a new hotel booking website, aimed at offering a seamless and intuitive user experience (UX) with a modern and 
                         engaging user interface (UI). The objective was to build a platform that makes the process of making reservations, scheduling dinners, and 
                         purchasing event tickets straightforward and enjoyable for members, leveraging insights from user research and the industry's best practices. 
                         Also, to make the membership process seamless for new users.
-                    </p>
+                    </ReadMore>
                 </div>
 
                 <div className='role-view my-10 space-y-4'>
@@ -63,7 +92,7 @@ const AqualinaPage = () => {
 
                 <div className='design-process-view mt-12 md:mt-24'>
                   <h3 className='leading-8 md:leading-9 font-bold font-ogg text-[26px] md:text-3xl mt-10'>Design Process</h3>
-                  <hr className='my-2 w-[104px] h-[3px] text-[#E8DEFF]'/>
+                  <hr className='my-2 w-[104px] h-[3px] text-[#E8DEFF] border-2 rounded-full'/>
                   <div className='p-8 bg-white flex justify-center items-center rounded-lg mt-8'>
                       <img src={aqualinaDesign} alt="" className='item' />
                   </div>
@@ -75,7 +104,7 @@ const AqualinaPage = () => {
                   <h3 className='font-ogg font-bold text-[22px] md:text-2xl text-project-heading mt-2 mb-5'>User Interview</h3>
                   <p className='leading-8 md:leading-9 font-normal text-lg md:text-xl font-nb my-2'>I conducted interviews with users that have experience booking rooms and hotel services in order to tailor the needs and preferences of the 
                     intended audience so as to deliver a positive and optimal user experience.  Below are some of the questions asked.   </p>
-                  <ul className='list-disc list-inside leading-8 md:leading-9 font-normal text-lg md:text-xl font-nb ml-1 md:ml-3 space-y-2 mb-6'>
+                  <ul className='list-disc list-outside pl-4 leading-8 md:leading-9 font-normal text-lg md:text-xl font-nb ml-1 md:ml-3 space-y-2 mb-6'>
                     <li>Can you describe your last experience booking a room reservation online?</li>
                     <li>Which websites or apps have you used to book rooms/hotels in the past?</li>
                     <li>What did you like and dislike about those websites or apps?</li>
@@ -84,35 +113,35 @@ const AqualinaPage = () => {
                     <li>What are the biggest challenges you face when booking room/hotels online?</li>
                   </ul>
 
-                  <div className='p-8 bg-secondary-color flex flex-col md:flex-row justify-between rounded-lg'>
+                  <div className='p-4 md:p-8 bg-secondary-color flex flex-col md:flex-row justify-between rounded-lg'>
                     <div className='flex-1'>
                     <h2 className='text-project-primary font-bold text-[22px] md:text-2xl mb-4 font-ogg'>Key Insights from User Interview</h2>
-                      <ul className='list-disc list-inside ml-1 md:ml-3 leading-8 md:leading-9 font-normal text-lg md:text-xl font-nb text-project-primary-fade space-y-2 w-full'>
+                      <ul className='list-disc list-outside pl-4 ml-1 md:ml-3 leading-8 md:leading-9 font-normal text-lg md:text-xl font-nb text-project-primary-fade space-y-2 w-full'>
                         <li>Users prioritize ease of use , clear room information, highlighted amenities or services, transparent prices and competitive pricing when booking hotels/rooms online. </li>
                         <li>A lot of users highlighted simplified booking steps, short form fields, and use progress indicators to make the process user-friendly.</li>
                         <li>Some users especially the younger users (25 - 38 years) focused on a clean, modern design with intuitive navigation and engaging visual elements to enhance user experience.</li>
                       </ul>
                     </div>
-                    <div className='flex-1 flex justify-end'>
-                      <img src={stakeholderInterview} alt="" />
+                    <div className='flex-1 flex justify-center md:justify-end'>
+                      <img src={stakeholderInterview} alt="" className='w-[200px] h-[200px] md:w-[370px] md:h-[370px]'/>
                     </div>
                   </div>
 
                   <h3 className='font-ogg font-bold text-[22px] md:text-2xl text-project-heading mt-10 mb-6'>Stakeholders Interview</h3>
                   <p className='font-normal text-lg md:text-xl font-nb leading-8 md:leading-9 my-2'>I conducted interviews with the stakeholders to gain a deeper understanding of the needs, goals, and preferences of business. I gathered critical information and ensured user-centered design.</p>
-                  <ul className='list-disc list-inside leading-8 md:leading-9 font-normal text-lg md:text-xl font-nb ml-1 md:ml-3 mb-4 space-y-2'>
+                  <ul className='list-disc list-outside pl-4 leading-8 md:leading-9 font-normal text-lg md:text-xl font-nb ml-1 md:ml-3 mb-4 space-y-2'>
                     <li>How do you see Aqualina differentiating itself from other hotel booking websites, and what unique value proposition do you think we can offer to our guests?</li>
                     <li>Can you share your vision for how Aqualina will enhance the overall resort experience for our guests, and
                     what specific benefits you hope to offer?</li>
                   </ul>
 
-                  <div className='p-8 bg-secondary-color flex flex-col-reverse md:flex-row justify-between rounded-lg'>
-                    <div className='flex-1 flex justify-start'>
-                      <img src={userInterview} alt="" />
+                  <div className='p-4 md:p-8 bg-secondary-color flex flex-col-reverse md:flex-row justify-between rounded-lg'>
+                    <div className='flex-1 flex justify-center md:justify-start'>
+                      <img src={userInterview} alt="" className='w-[200px] h-[200px] md:w-[370px] md:h-[370px]'/>
                     </div>
                     <div className='flex-1'>
                       <h3 className='text-project-primary font-bold text-[22px] md:text-2xl mb-4 font-ogg'>Key Insights from Stakeholders Interview</h3>
-                      <ul className='list-disc list-inside ml-1 md:ml-3 leading-8 md:leading-9 font-normal text-lg md:text-xl font-nb text-project-primary-fade space-y-2'>
+                      <ul className='list-disc list-outside pl-4 ml-1 md:ml-3 leading-8 md:leading-9 font-normal text-lg md:text-xl font-nb text-project-primary-fade space-y-2'>
                         <li>The stakeholders aimed to enhance the resort experience by providing seamless booking, personalized recommendations, and exclusive benefits. </li>
                         <li>The membership program and community features foster a sense of belonging, which strengthens guest loyalty and customer retention.</li>
                         <li>Success is measured by metrics such as increased direct bookings, higher guest satisfaction scores, and improved guest retention rates.</li>
@@ -142,13 +171,13 @@ const AqualinaPage = () => {
                         
                         <div className="px-4">
                           <div className="mb-4">
-                            <h3 className="text-base md:text-lg font-semibold text-user-color">About</h3>
+                            <h3 className="text-base md:text-lg font-normal text-user-color">About</h3>
                             <p className="text-sm md:text-base font-normal leading-6 md:leading-7 text-body-color">James loves attending events, hangouts, and experiencing new things with his friends. He's tech-savvy and always on the lookout for budget-friendly ways to enjoy high-end experiences.</p>
                           </div>
                           
                           <div className="mb-4">
-                            <h3 className="text-base md:text-lg font-semibold text-user-color">Goals</h3>
-                            <ul className="list-disc list-inside space-y-2 text-sm md:text-base leading-6 md:leading-7 text-body-color">
+                            <h3 className="text-base md:text-lg font-normal text-user-color">Goals</h3>
+                            <ul className="list-disc list-outside pl-4 space-y-2 text-sm md:text-base leading-6 md:leading-7 text-body-color">
                               <li>Find affordable luxury hotels and experiences</li>
                               <li>Stay up-to-date with the latest events and happenings</li>
                               <li>Share his experiences on social media</li>
@@ -156,8 +185,8 @@ const AqualinaPage = () => {
                           </div>
                           
                           <div className="mb-4">
-                            <h3 className="text-base md:text-lg font-semibold text-user-color">Behavioral patterns</h3>
-                            <ul className="list-disc list-inside space-y-2 text-sm md:text-base leading-6 md:leading-7 text-body-color">
+                            <h3 className="text-base md:text-lg font-normal text-user-color">Behavioral patterns</h3>
+                            <ul className="list-disc list-outside pl-4 space-y-2 text-sm md:text-base leading-6 md:leading-7 text-body-color">
                               <li>Researches and compares prices online</li>
                               <li>Reads reviews and asks for recommendations from friends</li>
                               <li>Uses social media to discover new experiences and events</li>
@@ -165,8 +194,8 @@ const AqualinaPage = () => {
                           </div>
                           
                           <div className="mb-4">
-                            <h3 className="text-base md:text-lg font-semibold text-user-color">Pain points</h3>
-                            <ul className="list-disc list-inside space-y-2 text-sm md:text-base leading-6 md:leading-7 text-body-color">
+                            <h3 className="text-base md:text-lg font-normal text-user-color">Pain points</h3>
+                            <ul className="list-disc list-outside pl-4 space-y-2 text-sm md:text-base leading-6 md:leading-7 text-body-color">
                               <li>Limited budget for luxury experiences</li>
                               <li>Difficulty finding affordable options that meet his high standards</li>
                               <li>Frustrated by outdated travel websites and booking processes</li>
@@ -174,8 +203,8 @@ const AqualinaPage = () => {
                           </div>
                           
                           <div>
-                            <h3 className="text-base md:text-lg font-semibold text-user-color">Recommendations</h3>
-                            <ul className="list-disc list-inside space-y-2 text-sm md:text-base leading-6 md:leading-7 text-body-color">
+                            <h3 className="text-base md:text-lg font-normal text-user-color">Recommendations</h3>
+                            <ul className="list-disc list-outside pl-4 space-y-2 text-sm md:text-base leading-6 md:leading-7 text-body-color">
                               <li>Budget-friendly luxury hotel options</li>
                               <li>Personalized event and experience recommendations</li>
                               <li>User-friendly booking process with transparent pricing</li>
@@ -196,20 +225,20 @@ const AqualinaPage = () => {
                         
                         <div className="px-4">
                           <div className="mb-4">
-                            <h3 className="text-base md:text-lg font-semibold text-user-color">About</h3>
+                            <h3 className="text-base md:text-lg font-normal text-user-color">About</h3>
                             <p className="text-base font-normal leading-6 md:leading-7 text-body-color">Alexandra values luxury, exclusivity privacy and discretion. She loves exploring new places and cultures both for leisure and business, seeking high-end experiences. She often struggles with finding the right accommodations that meet her needs and expectations. She is willing to pay premium for high-end experiences</p>
                           </div>
                           
                           <div className="mb-4">
-                            <h3 className="text-base md:text-lg font-semibold text-user-color">Goals</h3>
-                            <ul className="list-disc list-inside space-y-2 text-sm md:text-base leading-6 md:leading-7 text-body-color">
+                            <h3 className="text-base md:text-lg font-normal text-user-color">Goals</h3>
+                            <ul className="list-disc list-outside pl-4 space-y-2 text-sm md:text-base leading-6 md:leading-7 text-body-color">
                               <li>Alexandra wants to book accommodations hassle-free and enjoy a comfortable and memorable stay during her visits</li>
                             </ul>
                           </div>
                           
                           <div className="mb-4">
-                            <h3 className="text-base md:text-lg font-semibold text-user-color">Behavioral patterns</h3>
-                            <ul className="list-disc list-inside space-y-2 text-sm md:text-base leading-6 md:leading-7 text-body-color">
+                            <h3 className="text-base md:text-lg font-normal text-user-color">Behavioral patterns</h3>
+                            <ul className="list-disc list-outside pl-4 space-y-2 text-sm md:text-base leading-6 md:leading-7 text-body-color">
                               <li>Conducts thorough research before booking hotels</li>
                               <li>Reads reviews and asks for referral from colleagues and clients</li>
                               <li>Compares price and amenities across multiple websites</li>
@@ -217,8 +246,8 @@ const AqualinaPage = () => {
                           </div>
                           
                           <div className="mb-4">
-                            <h3 className="text-base md:text-lg font-semibold text-user-color">Pain points</h3>
-                            <ul className="list-disc list-inside space-y-2 text-sm md:text-base leading-6 md:leading-7 text-body-color">
+                            <h3 className="text-base md:text-lg font-normal text-user-color">Pain points</h3>
+                            <ul className="list-disc list-outside pl-4 space-y-2 text-sm md:text-base leading-6 md:leading-7 text-body-color">
                               <li>Feeling stressed and overwhelmed by the endless options available online</li>
                               <li>Wasting time comparing prices and amenities of different hotels</li>
                               <li>Experiencing disappointment when the chosen hotel does not meet her expectations</li>
@@ -226,8 +255,8 @@ const AqualinaPage = () => {
                           </div>
                           
                           <div>
-                            <h3 className="text-base md:text-lg font-semibold text-user-color">Recommendations</h3>
-                            <ul className="list-disc list-inside space-y-2 text-sm md:text-base leading-6 md:leading-7 text-body-color">
+                            <h3 className="text-base md:text-lg font-normal text-user-color">Recommendations</h3>
+                            <ul className="list-disc list-outside pl-4 space-y-2 text-sm md:text-base leading-6 md:leading-7 text-body-color">
                               <li>Priority customer support</li>
                               <li>Personalized booking experience</li>
                               <li>Access to exclusive amenities and services</li>
@@ -271,8 +300,8 @@ const AqualinaPage = () => {
 
                 <div className='takeaway-view text-white my-10 leading-8 md:leading-9 space-y-3'>
                     <h3 className='font-bold text-2xl mb-1 font-ogg'>Key Takeaway</h3>
-                    <hr className='my-2 w-[104px] h-[3px] text-[#E8DEFF]'/>
-                    <ul className='list-disc list-inside ml-3 leading-8 md:leading-9 font-normal text-lg md:text-xl font-nb space-y-4'>
+                    <hr className='my-2 w-[104px] h-[3px] text-[#E8DEFF] border-2 rounded-full'/>
+                    <ul className='list-disc list-outside pl-3 pt-2 md:pt-0 ml-3 leading-8 md:leading-9 font-normal text-lg md:text-xl font-nb space-y-4'>
                       <li>It helped me better understand the pain point of users interacting with hotel websites and a better knowledge of the hospitality industry. It was also a fun and new experience.</li>
                       <li>During the user research process, it revealed contradictory preferences among different user segments. For example, some users prioritized simplicity and ease of use, while others preferred more advanced features and customization options.</li>
                       <li>The project faced challenges, but the most difficult piece was the inadequate documentation from the product team and the delayed communication in regards to feedback. Thankfully, we were able to be more flexible with our timing so as for everyone to be present when needed.</li>

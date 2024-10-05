@@ -1,5 +1,7 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-irregular-whitespace */
 /* eslint-disable react/no-unescaped-entities */
+import { useState, useEffect } from 'react'
 import Spectas from '../assets/images/spcta-header.png'
 import figmaIcon from '../assets/icons/figma-icon.svg'
 import excelIcon from '../assets/icons/excel.svg'
@@ -22,6 +24,47 @@ import Dogwood from '../assets/images/competitive-dogood.png'
 import Olio from '../assets/images/competitve-olio.png'
 
 const Specta = () => {
+  const [showTopBtn, setShowTopBtn] = useState(false);
+  useEffect(() => {
+      window.addEventListener("scroll", () => {
+          if (window.scrollY > 400) {
+              setShowTopBtn(true);
+          } else {
+              setShowTopBtn(false);
+          }
+      });
+  }, []);
+  const goToTop = () => {
+      window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+      });
+  };
+  const ReadMore = ({ children }) => {
+    const text = children;
+    const [isReadMore, setIsReadMore] = useState(true);
+    const toggleReadMore = () => {
+        setIsReadMore(!isReadMore);
+    };
+    return (
+      <p className='font-nb font-normal text-lg md:text-xl leading-8 md:leading-9 py-4 md:py-2'>
+          <span className="block md:hidden">
+              {isReadMore ? text.slice(0, 200) : text}
+              <span
+                  onClick={toggleReadMore}
+                  className="read-or-hide"
+                  style={{ color: "rgb(215 200 252)" }}
+              >
+                  {isReadMore ? "...read more" : " show less"}
+              </span>
+          </span>
+          
+          <span className="hidden md:block">
+              {text}
+          </span>
+      </p>
+    );
+};
   return (
     <>
         <img src={Spectas} alt="" className='w-full' />  
@@ -32,15 +75,15 @@ const Specta = () => {
 
               <div className='overview my-4'>
                   <h4 className='font-ogg font-bold text-2xl md:text-3xl'>Overview</h4>
-                  <hr className='mt-1 mb-2 w-[114px] h-[3px] text-[#E8DEFF] opacity-30 rounded-sm'/>
+                  <hr className='mt-1 mb-2 w-[114px] h-[3px] text-[#E8DEFF] opacity-30 rounded-full border-2'/>
 
-                  <p className='font-nb font-normal text-lg md:text-xl leading-8 md:leading-9 my-2'>SPCTA is an app and website that seeks to eliminate waste in Nigeria. It helps to solve 
+                  <ReadMore>SPCTA is an app and website that seeks to eliminate waste in Nigeria. It helps to solve 
                     the problems of unemployment, environmental and health issues through the process of collecting waste from users, paying users, processing waste,
                     and transporting processed waste through dynamic logistics infrastructure. Also, the conversion of processed waste into raw materials for reuse
                       in global packaging supply chains. My role was to conduct research on users, competitors and similar products to use the data acquired to 
                       develop user personas and optimize user experience through high-fidelity user interfaces. I collaborated with the project management consultant
                       , development team and stakeholders representative to achieve the success of this project.
-                  </p>
+                  </ReadMore>
               </div>
 
               <div className='role-view my-10 space-y-4'>
@@ -67,7 +110,7 @@ const Specta = () => {
 
               <div className='design-process-view mt-12 md:mt-24'>
                   <h3 className='leading-8 md:leading-9 font-bold font-ogg text-[26px] md:text-3xl mt-10'>Design Process</h3>
-                  <hr className='my-2 w-[187px] h-[3px] text-[#E8DEFF] opacity-30 rounded-sm'/>
+                  <hr className='my-2 w-[102px] md:w-[187px] h-[3px] text-[#E8DEFF] opacity-30 rounded-full border-2'/>
                   <div className='p-8 bg-white flex justify-center items-center rounded-lg my-4'>
                       <img src={spctaDesign} alt="" className='item' />
                   </div>
@@ -77,9 +120,9 @@ const Specta = () => {
                   <h1 className='font-ogg font-bold text-2xl my-6'>Discover Phase</h1>
 
                   <h3 className='font-ogg font-bold text-[22px] md:text-2xl text-project-heading mt-2 mb-5'>Survey</h3>
-                  <p className='leading-8 md:leading-9 font-normal text-lg md:text-xl font-nb my-2'>I  conducted user research using Surveys and Questionnaires to provide insight and help 
+                  <p className='leading-8 md:leading-9 font-normal text-lg md:text-xl font-nb py-2'>I  conducted user research using Surveys and Questionnaires to provide insight and help 
                     in designing interfaces that cater to the specific needs of the users.</p>
-                  <ul className='list-disc list-inside leading-8 md:leading-9 font-normal text-lg md:text-xl font-nb ml-3 space-y-2 mb-6'>
+                  <ul className='list-disc list-outside pl-3 leading-8 md:leading-9 font-normal text-lg md:text-xl font-nb ml-3 space-y-2 mb-6'>
                     <li>How often do you currently dispose of your house waste?</li>
                     <li>Are you are of the environmental benefits of recycling?</li>
                     <li>How much knowledge do you have on recycling?</li>
@@ -90,10 +133,10 @@ const Specta = () => {
                     <li>How would you prefer to receive notifications and communicate with service providers?</li>
                   </ul>
 
-                  <div className='p-8 bg-secondary-color flex flex-col md:flex-row justify-between rounded-lg'>
+                  <div className='p-4 md:p-8 bg-secondary-color flex flex-col md:flex-row justify-between rounded-lg'>
                     <div className='flex-1'>
-                    <h2 className='text-project-primary font-bold text-[22px] md:text-2xl mb-4'>Key Insights from Survey</h2>
-                      <ul className='list-disc list-inside ml-1 md:ml-3 leading-8 md:leading-9 font-normal text-lg md:text-xl font-nb text-project-primary-fade space-y-2'>
+                    <h2 className='text-project-primary font-bold text-[22px] md:text-2xl mb-4 font-ogg'>Key Insights from Survey</h2>
+                      <ul className='list-disc list-outside pl-3 ml-1 md:ml-3 leading-8 md:leading-9 font-normal text-lg md:text-xl font-nb text-project-primary-fade space-y-2'>
                         <li>75% of respondents rely on informal methods such as burning or burying waste due to irregular collection services. This indicates a critical need for reliable and consistent waste collection solutions.</li>
                         <li>While many respondents are aware of the environmental benefits of recycling, the importance placed on recycling varies. This highlights the necessity for educational initiatives to increase the perceived value of proper waste disposal and recycling</li>
                         <li>The prospect of earning money or rewards significantly motivates respondents to properly dispose of their waste. This suggests that the app’s points and rewards system is likely to be effective in encouraging responsible waste management behaviors</li>
@@ -109,7 +152,7 @@ const Specta = () => {
               <div className='competitive-view my-10'>
                 <h3 className='font-ogg font-bold text-[22px] md:text-2xl text-project-heading mt-10 mb-6'>Competitive Analysis</h3>
                 <p className='font-normal text-lg md:text-xl font-nb my-4 leading-8 md:leading-9'>I conducted competitive analysis with key competitors in the waste management industry in Nigeria and globally highlighting their strengths and weaknesses. The objectives of this analysis was to aid in designing a user-friendly and intuitive app as well as  identifying features that resonate with users to ensure the app is a success.  Below is the analysis done: .</p>
-                <div className='grid grid-cols-2 md:grid-cols-4 my-6 space-x-0 md:space-x-4 space-y-4 md:space-y-0 gap-x-4 md:gap-x-0 font-nb'>
+                <div className='grid grid-cols-2 md:grid-cols-4 my-6 space-x-0 md:space-x-4 gap-y-4 md:gap-y-o gap-x-4 md:gap-x-0 font-nb'>
                   <div className="bg-white rounded-lg overflow-hidden flex-1 text-user-color py-4">
                     <div className="flex flex-col p-4">
                           <img src={Pakam} alt="Profile Picture" className="w-28 h-10 mb-2" />
@@ -120,16 +163,16 @@ const Specta = () => {
                         
                         <div className="px-4">
                           <div className="mb-4">
-                            <h3 className="text-lg font-semibold">Strengths</h3>
-                            <ul className="list-disc list-inside space-y-2">
+                            <h3 className="text-lg font-normal font-ogg">Strengths</h3>
+                            <ul className="list-disc list-outside pl-5 space-y-2">
                               <li>Existing focus on recycling in Nigeria</li>
                               <li>Established user base</li>
                             </ul>
                           </div>
 
                           <div className="mb-4">
-                            <h3 className="text-lg font-semibold">Weaknesses</h3>
-                            <ul className="list-disc list-inside space-y-2">
+                            <h3 className="text-lg font-normal font-ogg">Weaknesses</h3>
+                            <ul className="list-disc list-outside pl-5 space-y-2">
                               <li>Limited to recyclable materials</li>
                               <li>Doesn't offer functionalities like processing of all waste types</li>
                               <li>Bill payments</li>
@@ -148,16 +191,16 @@ const Specta = () => {
                         
                         <div className="px-4">
                           <div className="mb-4">
-                            <h3 className="text-lg font-semibold">Strengths</h3>
-                            <ul className="list-disc list-inside space-y-2">
+                            <h3 className="text-lg font-normal font-ogg">Strengths</h3>
+                            <ul className="list-disc list-outside pl-5 space-y-2">
                               <li>Established presence in Nigeria</li>
                               <li>Waste collection expertise</li>
                             </ul>
                           </div>
 
                           <div className="mb-4">
-                            <h3 className="text-lg font-semibold">Weaknesses</h3>
-                            <ul className="list-disc list-inside space-y-2">
+                            <h3 className="text-lg font-normal font-ogg">Weaknesses</h3>
+                            <ul className="list-disc list-outside pl-5 space-y-2">
                               <li>Unclear waste collection process</li>
                               <li>Doesn't offer functionalities like user payouts</li>
                               <li>Does not process all waste types</li>
@@ -176,16 +219,16 @@ const Specta = () => {
                         
                         <div className="px-4">
                           <div className="mb-4">
-                            <h3 className="text-lg font-semibold">Strengths</h3>
-                            <ul className="list-disc list-inside space-y-2">
+                            <h3 className="text-lg font-normal font-ogg">Strengths</h3>
+                            <ul className="list-disc list-outside pl-5 space-y-2">
                               <li>Strong focus on sustainability</li>
                               <li>Community-driven approach</li>
                             </ul>
                           </div>
 
                           <div className="mb-4">
-                            <h3 className="text-lg font-semibold">Weaknesses</h3>
-                            <ul className="list-disc list-inside space-y-2">
+                            <h3 className="text-lg font-normal font-ogg">Weaknesses</h3>
+                            <ul className="list-disc list-outside pl-5 space-y-2">
                               <li>Limited to food waste</li>
                               <li>Does not handle processing</li>
                               <li>Does not offer services like bill payments</li>
@@ -204,16 +247,16 @@ const Specta = () => {
                         
                         <div className="px-4">
                           <div className="mb-4">
-                            <h3 className="text-lg font-semibold">Strengths</h3>
-                            <ul className="list-disc list-inside space-y-2">
+                            <h3 className="text-lg font-normal font-ogg">Strengths</h3>
+                            <ul className="list-disc list-outside pl-5 space-y-2">
                               <li>Established brand globally</li>
                               <li>Operational experience in waste collection</li>
                             </ul>
                           </div>
 
                           <div className="mb-4">
-                            <h3 className="text-lg font-semibold">Weaknesses</h3>
-                            <ul className="list-disc list-inside space-y-2">
+                            <h3 className="text-lg font-normal font-ogg">Weaknesses</h3>
+                            <ul className="list-disc list-outside pl-5 space-y-2">
                               <li>Does not offer waste processing</li>
                               <li>Does not offer bill payment functionalities</li>
                             </ul>
@@ -222,10 +265,10 @@ const Specta = () => {
                   </div>
                 </div>
 
-                <div className='p-8 bg-secondary-color flex flex-col md:flex-row justify-between rounded-lg'>
+                <div className='p-4 md:p-8 bg-secondary-color flex flex-col md:flex-row justify-between rounded-lg'>
                   <div className='flex-1'>
-                    <h3 className='text-project-primary font-bold text-[22px] md:text-2xl mb-4'>Key Insights from Competitive Analysis</h3>
-                    <ul className='list-disc list-inside ml-1 md:ml-3 leading-8 md:leading-9 font-normal text-lg md:text-xl font-nb text-project-primary-fade space-y-2'>
+                    <h3 className='text-project-primary font-bold text-[22px] md:text-2xl mb-4 font-ogg'>Key Insights from Competitive Analysis</h3>
+                    <ul className='list-disc list-outside pl-3 ml-1 md:ml-3 leading-8 md:leading-9 font-normal text-lg md:text-xl font-nb text-project-primary-fade space-y-2'>
                       <li>Catering to a broader range of waste types, including household waste, recyclables, and bulk items would allow onboarding of more users.</li>
                       <li>Providing a clear financial incentive for waste collection.</li>
                       <li>Allow users to conveniently pay bills within the app using the funds generated from waste collection.</li>
@@ -251,26 +294,26 @@ const Specta = () => {
                 </div>
 
                 <div className='flex flex-col md:flex-row justify-between space-y-4 md:space-y-0 gap-x-12 my-6 font-nb px-2'>
-                  <div className="bg-white rounded-lg overflow-hidden flex-1 text-user-color py-4">
+                  <div className="bg-white rounded-lg overflow-hidden flex-1 text-user-color-opacity py-4">
                       <div className="flex items-center p-4">
                         <img src={Ojukwu} alt="Profile Picture" className="w-16 h-16 rounded-lg mr-4" />
                         <div>
                           <h2 className="text-xl md:text-2xl font-normal">Ojukwu Kunle</h2>
-                          <h5 className="font-normal text-sm">43 years | Business Owner</h5>
+                          <h5 className="font-normal text-sm font-nb">43 years | Business Owner</h5>
                         </div>
                       </div>
                       
                       <div className="px-4">
                         <div className="mb-4">
-                          <h3 className="text-base md:text-lg font-semibold">About</h3>
+                          <h3 className="text-base md:text-lg font-normal text-user-color">About</h3>
                           <p className="text-sm md:text-base font-normal leading-6">Chinedu is a 42-year-old small business owner from Enugu, running an electronics shop. 
                             He is married with three children and has a diploma in Business Management. Chinedu is focused on efficiently managing both his household 
                             and business waste to reduce costs and maintain a clean environment</p>
                         </div>
                         
                         <div className="mb-4">
-                          <h3 className="text-base md:text-lg font-semibold">Goals</h3>
-                          <ul className="list-disc list-inside space-y-2 text-sm md:text-base">
+                          <h3 className="text-base md:text-lg font-normal text-user-color">Goals</h3>
+                          <ul className="list-disc list-outside pl-5 space-y-2 text-sm md:text-base">
                             <li>Find convenient waste collection solutions that do not disrupt his work schedule</li>
                             <li>Reduce waste disposal costs for his business</li>
                             <li>Efficiently manage household and business waste</li>
@@ -278,8 +321,8 @@ const Specta = () => {
                         </div>
                         
                         <div className="mb-4">
-                          <h3 className="text-base md:text-lg font-semibold">Behavioral patterns</h3>
-                          <ul className="list-disc list-inside space-y-2 text-sm md:text-base">
+                          <h3 className="text-base md:text-lg font-normal text-user-color">Behavioral patterns</h3>
+                          <ul className="list-disc list-outside pl-5 space-y-2 text-sm md:text-base">
                             <li>Uses his smartphone for business transactions and communications</li>
                             <li>Familiar with mobile apps but prefers simple and easy-to-use interfaces</li>
                             <li>Prefers communication through SMS and phone calls</li>
@@ -287,8 +330,8 @@ const Specta = () => {
                         </div>
                         
                         <div className="mb-4">
-                          <h3 className="text-base md:text-lg font-semibold">Pain points</h3>
-                          <ul className="list-disc list-inside space-y-2 text-sm md:text-base">
+                          <h3 className="text-base md:text-lg font-normal text-user-color">Pain points</h3>
+                          <ul className="list-disc list-outside pl-5 space-y-2 text-sm md:text-base">
                             <li>High cost of waste disposal services for his business</li>
                             <li>Lack of reliable waste collection, leading to waste buildup</li>
                             <li>Limited knowledge about recycling benefits and processes</li>
@@ -296,8 +339,8 @@ const Specta = () => {
                         </div>
                         
                         <div>
-                          <h3 className="text-base md:text-lg font-semibold">Recommendations</h3>
-                          <ul className="list-disc list-inside space-y-2 text-sm md:text-base">
+                          <h3 className="text-base md:text-lg font-normal text-user-color">Recommendations</h3>
+                          <ul className="list-disc list-outside pl-5 space-y-2 text-sm md:text-base">
                             <li>Emphasize cost savings from the app’s waste management services</li>
                             <li>Ensure the app provides reliable and timely waste collection</li>
                             <li>Offer easy-to-understand information about recycling benefits and processes</li>
@@ -313,21 +356,21 @@ const Specta = () => {
                         <img src={Alexandra} alt="Profile Picture" className="w-16 h-16 rounded-lg mr-4" />
                         <div>
                           <h2 className="text-xl md:text-2xl font-normal">Adaeze Danjuma</h2>
-                          <h5 className="font-normal text-sm">30 years | School Teacher</h5>
+                          <h5 className="font-normal text-sm font-nb">30 years | School Teacher</h5>
                         </div>
                       </div>
                       
                       <div className="px-4">
                         <div className="mb-4">
-                          <h3 className="text-base md:text-lg font-semibold">About</h3>
+                          <h3 className="text-base md:text-lg font-normal text-user-color">About</h3>
                           <p className="text-sm md:text-base font-normal leading-6">Adaeze is a 30-year-old secondary school teacher living in Lagos. 
                             She is married with two young children and holds a Bachelor's degree in Education. Balancing her professional responsibilities with 
                             household duties, Adaeze is keen on maintaining a clean and sustainable home environment</p>
                         </div>
                         
                         <div className="mb-4">
-                          <h3 className="text-base md:text-lg font-semibold">Goals</h3>
-                          <ul className="list-disc list-inside space-y-2 text-sm md:text-base">
+                          <h3 className="text-base md:text-lg font-normal text-user-color">Goals</h3>
+                          <ul className="list-disc list-outside pl-5 space-y-2 text-sm md:text-base">
                             <li>Efficiently manage household waste</li>
                             <li>Educate her children about environmental sustainability</li>
                             <li>Earn extra income through proper waste disposal</li>
@@ -335,8 +378,8 @@ const Specta = () => {
                         </div>
                         
                         <div className="mb-4">
-                          <h3 className="text-base md:text-lg font-semibold">Behavioral patterns</h3>
-                          <ul className="list-disc list-inside space-y-2 text-sm md:text-base">
+                          <h3 className="text-base md:text-lg font-normal text-user-color">Behavioral patterns</h3>
+                          <ul className="list-disc list-outside pl-5 space-y-2 text-sm md:text-base">
                             <li>Frequently uses her smartphone for banking, shopping, and social media</li>
                             <li>Comfortable with using mobile apps for various services</li>
                             <li>Prefers receiving notifications via in-app messages and SMS</li>
@@ -344,8 +387,8 @@ const Specta = () => {
                         </div>
                         
                         <div className="mb-4">
-                          <h3 className="text-base md:text-lg font-semibold">Pain points</h3>
-                          <ul className="list-disc list-inside space-y-2 text-sm md:text-base">
+                          <h3 className="text-base md:text-lg font-normal text-user-color">Pain points</h3>
+                          <ul className="list-disc list-outside pl-5 space-y-2 text-sm md:text-base">
                             <li>Limited time to handle household chores due to a busy teaching schedule</li>
                             <li>Irregular waste collection services in her area</li>
                             <li>Lack of awareness about local recycling options</li>
@@ -353,8 +396,8 @@ const Specta = () => {
                         </div>
                         
                         <div>
-                          <h3 className="text-base md:text-lg font-semibold">Recommendations</h3>
-                          <ul className="list-disc list-inside space-y-2 text-sm md:text-base">
+                          <h3 className="text-base md:text-lg font-normal text-user-color">Recommendations</h3>
+                          <ul className="list-disc list-outside pl-5 space-y-2 text-sm md:text-base">
                             <li>Promote the app’s convenience and time-saving features</li>
                             <li>Highlight the financial rewards and incentives for proper waste disposal</li>
                             <li>Include educational content about recycling and sustainability</li>
@@ -404,9 +447,9 @@ const Specta = () => {
               </div>
 
               <div className='text-white takeaway-view my-10'>
-                  <h3 className='font-bold text-2xl mb-4'>Key Takeaway</h3>
-                  <hr className='my-2 w-[104px] h-[3px] text-[#E8DEFF]'/>
-                  <ul className='list-disc list-inside ml-3 leading-8 md:leading-9 font-normal text-lg md:text-xl font-nb space-y-2'>
+                  <h3 className='font-bold text-2xl mb-4 font-ogg'>Key Takeaway</h3>
+                  <hr className='my-2 w-[104px] h-[3px] text-[#E8DEFF] border-2 rounded-full'/>
+                  <ul className='list-disc list-outside pl-3 ml-3 leading-8 md:leading-9 font-normal text-lg md:text-xl font-nb py-3 space-y-2'>
                     <li>It helped me better understand the pain point of users interacting with hotel websites and a better knowledge of the hospitality industry. It was also a fun and new experience.</li>
                     <li>During the user research process, it revealed contradictory preferences among different user segments. For example, some users prioritized simplicity and ease of use, while others preferred more advanced features and customization options.</li>
                     <li>The project faced challenges, but the most difficult piece was the inadequate documentation from the product team and the delayed communication in regards to feedback. Thankfully, we were able to be more flexible with our timing so as for everyone to be present when needed.</li>
@@ -420,7 +463,8 @@ const Specta = () => {
         <Project available={false}/>
 
         <ContactForm />
-    
+
+        {showTopBtn && <button onClick={goToTop}>Scroll up</button>}
     </>
   )
 }

@@ -9,7 +9,7 @@ const AboutHero = () => {
         <section className='flex flex-col md:flex-row px-4 md:px-24 justify-between container-custom py-10'>
           <h2 className="text-4xl font-bold font-ogg mb-2 block md:hidden text-white text-center">About me</h2>
           <div className='flex-1 flex items-center justify-center md:items-start'>
-              <img src={AboutHeader} alt="" className="w-1/2 h-1/2 md:w-[400px] md:h-[520px]" />
+              <img src={AboutHeader} alt="" className="w-2/3 h-2/3 md:w-[400px] md:h-[520px]" />
           </div>
 
           <div className='flex-1 text-white'>

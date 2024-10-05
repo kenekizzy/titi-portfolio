@@ -20,7 +20,7 @@ const ProjectCard = ({projectName, projectDescription, projectImage, available, 
   return (
     <Link to={`/project/${projectName}`}>
       <div
-      className="relative bg-card-background border border-none my-8 rounded-md shadow-lg p-6 md:h-card-height md:hover:animate-bounce"
+      className="relative bg-card-background border border-none my-8 rounded-md shadow-lg py-6 px-4 md:px-6 md:h-card-height md:hover:animate-bounce"
       style={{
         '--bounce-start-bg': getBounceOutColor(projectName),
         '--bounce-mid-bg': getBounceOutColor(projectName),
@@ -29,7 +29,7 @@ const ProjectCard = ({projectName, projectDescription, projectImage, available, 
     >
       <div>
         <div className="flex justify-between items-center">
-          <h2 className="font-medium text-sm md:text-lg font-workSans text-card-heading tracking-wider">
+          <h2 className="font-medium text-sm md:text-base font-workSans text-card-heading tracking-wider">
             {version.toUpperCase()}
           </h2>
           {!available && (
@@ -39,11 +39,11 @@ const ProjectCard = ({projectName, projectDescription, projectImage, available, 
           )}
         </div>
 
-        <div className="mt-2 md:mt-0 mb-8 space-y-4">
+        <div className="pt-2 mb-8 space-y-2">
           <h3 className="font-normal text-[28px] md:text-4xl tracking-wide text-white font-oggBook">
             {projectName}
           </h3>
-          <p className="font-normal text-base md:text-lg text-card-description font-nb group-hover:text-[#EDEDED]">
+          <p className="font-normal text-base md:text-lg text-card-description leading-6 md:leading-9 font-nb group-hover:text-[#EDEDED]">
             {projectDescription}
           </p>
 
@@ -73,7 +73,7 @@ const ProjectCard = ({projectName, projectDescription, projectImage, available, 
       <img
         src={directionArrow}
         alt=""
-        className="absolute bottom-3 right-3"
+        className="absolute bottom-3 right-4"
       />
     </div>
 
