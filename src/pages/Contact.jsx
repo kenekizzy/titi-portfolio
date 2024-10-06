@@ -2,7 +2,7 @@ import ContactForm from "../components/ContactForm"
 
 const Contact = () => {
   return (
-    <div>
+    <div className="w-screen h-screen">
         <ContactForm />
     </div>
   )

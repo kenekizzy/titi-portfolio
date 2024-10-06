@@ -43,7 +43,7 @@ const ProjectCard = ({projectName, projectDescription, projectImage, available, 
           <h3 className="font-normal text-[28px] md:text-4xl tracking-wide text-white font-oggBook">
             {projectName}
           </h3>
-          <p className="font-normal text-base md:text-lg text-card-description leading-6 md:leading-9 font-nb group-hover:text-[#EDEDED]">
+          <p className="font-normal text-base md:text-lg text-card-description leading-6 md:leading-7 font-nb group-hover:text-[#EDEDED]">
             {projectDescription}
           </p>
 

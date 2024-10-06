@@ -1,4 +1,5 @@
-import Arrow from '../assets/icons/maki_arrow.svg'
+import { Link } from 'react-router-dom'
+// import Arrow from '../assets/icons/maki_arrow.svg'
 import Cinderella from '../assets/images/Cinderella.jpg'
 import cinderellaIcon from '../assets/icons/Cinderrelli.svg'
 import LakeImage from '../assets/images/lake-picture.jpg'
@@ -23,7 +24,7 @@ import Trapped from '../assets/images/trapped.jpg'
 import trappedIcon from '../assets/icons/trapped.svg'
 import Universe from '../assets/images/universe.jpg'
 import universeIcon from '../assets/icons/crescent-moon.svg'
-import { useState } from 'react';
+// import { useState } from 'react';
 
  const PlayGround = () => {
     const images = [
@@ -41,10 +42,10 @@ import { useState } from 'react';
       { image: Anya, imageName: "Anya from SpyxFamily", emoji: anyaIcon },
     ]
 
-      const [currentIndex, setCurrentIndex] = useState(0);
+      // const [currentIndex, setCurrentIndex] = useState(0);
 
       const displayImages = () => {
-        return images.slice(currentIndex, currentIndex + 6).map((imageObj, index) => (
+        return images.map((imageObj, index) => (
           <>
             <img key={index} src={imageObj.image} alt='slide' className="w-1/2 md:w-1/6 p-1" />
             {/* <div className="mt-2 block">
@@ -55,17 +56,17 @@ import { useState } from 'react';
         ));
       };
     
-      const nextSlide = () => {
-        if (currentIndex + 1 < images.length - 5) {
-          setCurrentIndex(currentIndex + 1);
-        }
-      };
+      // const nextSlide = () => {
+      //   if (currentIndex + 6 < images.length) {
+      //     setCurrentIndex(currentIndex + 6); 
+      //   }
+      // };
     
-      const prevSlide = () => {
-        if (currentIndex - 1 >= 0) {
-          setCurrentIndex(currentIndex - 1);
-        }
-      };
+      // const prevSlide = () => {
+      //   if (currentIndex - 6 >= 0) {
+      //     setCurrentIndex(currentIndex - 6); 
+      //   }
+      // };
   
   return (
     <div className='bg-portfolio'>
@@ -76,11 +77,11 @@ import { useState } from 'react';
           In my free time, I <span className="text-white">sketch</span> and I <span className="text-white">paint</span>. I also dabble into <span className="text-white">graphic work</span>, I love art in all forms and it helps my creativity , It also relaxes and refreshes the mind.
         </p>
         <div className="mt-2">
-          <div className='flex justify-end items-end mb-2'>
+          {/* <div className='flex justify-end items-end mb-2'>
               <img src={Arrow} alt="Scroll Left" className="rotate-180 cursor-pointer" onClick={prevSlide}/>
               <img src={Arrow} alt="Scroll Right" className="ml-3 cursor-pointer" onClick={nextSlide}/>
-          </div>
-          <div className="flex flex-row space-x-2 overflow-hidden">
+          </div> */}
+          <div className="flex flex-row space-x-2 overflow-x-scroll overflow-y-hidden">
               {displayImages()}
           </div>
         </div> 
@@ -88,7 +89,7 @@ import { useState } from 'react';
 
         </div>
         <div className="button-section">
-          <button className="view-button font-workSans">View all</button>
+          <Link to='/playground' className="view-button font-workSans">View all</Link>
         </div>
       </div>
     </div>

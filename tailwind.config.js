@@ -70,7 +70,7 @@ export default {
       backgroundImage: {
         'card': "url('assets/images/card-section.png')",
         'contact-image': "url('assets/images/contac-form.png')",
-        'coming-soon': "url('assets/images/coming-soon.png')"
+        'coming-soon': "url('assets/images/coming.png')"
       },
       backgroundColor: {
         "portfolio":  "rgba(28, 21, 45, 1)",

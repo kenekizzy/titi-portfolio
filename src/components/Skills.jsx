@@ -13,7 +13,7 @@ import Ontres from '../assets/icons/ontres.svg'
 const Skills = () => {
   return (
     <div className='bg-portfolio'>
-        <section className='flex flex-col container-custom py-0 md:pt-8 md:pb-24 px-4 md:px-24  font-nb'>
+        <section className='flex flex-col container-custom pt-0 pb-16 md:pt-8 md:pb-24 px-4 md:px-24  font-nb'>
             <div className='bg-white p-4 md:p-8 rounded-lg'>
                 <div className='skill'>
                     <h1 className='font-bold text-3xl leading-9 my-2 font-ogg'>My Skills</h1>

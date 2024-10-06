@@ -2,17 +2,19 @@
 import DribbleIcon from '../assets/icons/dribble.svg'
 import LinkedInIcon from '../assets/icons/linkedin.svg'
 import InstagramIcon from '../assets/icons/instagram.svg'
+import { ThreeDots } from 'react-loader-spinner'
 import { toast } from 'react-toastify'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
+  const [loading, setLoading] = useState(false)
   const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true)
 
-    console.log('Form submitted:', form.current)
      emailjs
        .sendForm('service_oy0xcog', 'template_qwfbnzu', form.current, {
          publicKey: '720rtQJ2I-ZFv8IBL',
@@ -32,6 +34,7 @@ const ContactForm = () => {
             theme: "colored",
             style: { backgroundColor: '#2B9A66', color: '#fff', width: '391px', alignItems: 'center' },
             });
+            setLoading(false)
          },
          (error) => {
            console.log(error)
@@ -48,6 +51,7 @@ const ContactForm = () => {
             theme: "colored",
             style: { backgroundColor: '#DC3E42', color: '#fff', width: '391px' },
             });
+            setLoading(false)
          },
        );
        form.current.reset()
@@ -79,7 +83,24 @@ const ContactForm = () => {
                 <textarea className='px-2 py-1 rounded-lg w-full md:w-[487px] h-[129px] gap-2 text-input-field-text bg-input-field-background border-2 border-[#BBBBBB]' name='message' placeholder="Enter description"/>
               </div>
               <div className="submit">
-                <button className="text-center bg-[#6D3091] rounded-lg py-2 px-4 w-full md:w-[488px] h-[44px]" type='submit'>Submit</button>
+                <button className="text-center bg-[#6D3091] rounded-lg py-2 px-4 w-full md:w-[488px] h-[44px]" type='submit'>
+                  {loading ? (
+                     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
+                        <ThreeDots
+                        height={20}
+                        width={20}
+                        color="#fff"
+                        visible={true}
+                        ariaLabel="oval-loading"
+                        secondaryColor="#ccc"
+                        strokeWidth={2}
+                        strokeWidthSecondary={2}
+                      />
+                     </div>
+                    ) : (
+                      'Submit'
+                    )}
+                </button>
               </div>
             </form>
           </div>

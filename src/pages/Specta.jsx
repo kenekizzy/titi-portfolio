@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-irregular-whitespace */
 /* eslint-disable react/no-unescaped-entities */
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Spectas from '../assets/images/spcta-header.png'
 import figmaIcon from '../assets/icons/figma-icon.svg'
 import excelIcon from '../assets/icons/excel.svg'
@@ -22,24 +22,9 @@ import Pakam from '../assets/images/competitive-pakham.png'
 import BinWaste from '../assets/images/competitve-binwaste.png'
 import Dogwood from '../assets/images/competitive-dogood.png'
 import Olio from '../assets/images/competitve-olio.png'
+import ScrollToTop from 'react-scroll-to-top'
 
 const Specta = () => {
-  const [showTopBtn, setShowTopBtn] = useState(false);
-  useEffect(() => {
-      window.addEventListener("scroll", () => {
-          if (window.scrollY > 400) {
-              setShowTopBtn(true);
-          } else {
-              setShowTopBtn(false);
-          }
-      });
-  }, []);
-  const goToTop = () => {
-      window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-      });
-  };
   const ReadMore = ({ children }) => {
     const text = children;
     const [isReadMore, setIsReadMore] = useState(true);
@@ -67,6 +52,15 @@ const Specta = () => {
 };
   return (
     <>
+        <ScrollToTop
+          smooth
+          component={
+            <svg className='mx-auto' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" width="24" height="24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
+            </svg>
+          }
+        />
+
         <img src={Spectas} alt="" className='w-full' />  
 
         <div className='bg-projects-color w-full'>
@@ -464,7 +458,6 @@ const Specta = () => {
 
         <ContactForm />
 
-        {showTopBtn && <button onClick={goToTop}>Scroll up</button>}
     </>
   )
 }

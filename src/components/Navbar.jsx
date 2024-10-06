@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <>
         <div className='bg-portfolio'>
-            <nav className="flex justify-between items-center container-custom py-6 px-4 md:px-24 md:sticky">
+            <nav className="flex justify-between items-center container-custom py-6 px-4 md:px-24">
                 <div className='flex justify-center items-center w-28 h-16'>
                    <Link to="/"><img src={logo} alt="logo" className='w-full' /></Link> 
                 </div>
