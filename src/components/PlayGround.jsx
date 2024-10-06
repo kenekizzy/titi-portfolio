@@ -24,7 +24,6 @@ import Trapped from '../assets/images/trapped.jpg'
 import trappedIcon from '../assets/icons/trapped.svg'
 import Universe from '../assets/images/universe.jpg'
 import universeIcon from '../assets/icons/crescent-moon.svg'
-// import { useState } from 'react';
 
  const PlayGround = () => {
     const images = [
@@ -42,8 +41,6 @@ import universeIcon from '../assets/icons/crescent-moon.svg'
       { image: Anya, imageName: "Anya from SpyxFamily", emoji: anyaIcon },
     ]
 
-      // const [currentIndex, setCurrentIndex] = useState(0);
-
       const displayImages = () => {
         return images.map((imageObj, index) => (
           <>
@@ -55,18 +52,7 @@ import universeIcon from '../assets/icons/crescent-moon.svg'
           </>
         ));
       };
-    
-      // const nextSlide = () => {
-      //   if (currentIndex + 6 < images.length) {
-      //     setCurrentIndex(currentIndex + 6); 
-      //   }
-      // };
-    
-      // const prevSlide = () => {
-      //   if (currentIndex - 6 >= 0) {
-      //     setCurrentIndex(currentIndex - 6); 
-      //   }
-      // };
+  
   
   return (
     <div className='bg-portfolio'>
@@ -77,10 +63,6 @@ import universeIcon from '../assets/icons/crescent-moon.svg'
           In my free time, I <span className="text-white">sketch</span> and I <span className="text-white">paint</span>. I also dabble into <span className="text-white">graphic work</span>, I love art in all forms and it helps my creativity , It also relaxes and refreshes the mind.
         </p>
         <div className="mt-2">
-          {/* <div className='flex justify-end items-end mb-2'>
-              <img src={Arrow} alt="Scroll Left" className="rotate-180 cursor-pointer" onClick={prevSlide}/>
-              <img src={Arrow} alt="Scroll Right" className="ml-3 cursor-pointer" onClick={nextSlide}/>
-          </div> */}
           <div className="flex flex-row space-x-2 overflow-x-scroll overflow-y-hidden">
               {displayImages()}
           </div>
