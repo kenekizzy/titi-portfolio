@@ -13,6 +13,26 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const name = e.target.user_name.value.trim();
+  const email = e.target.user_email.value.trim();
+  const message = e.target.message.value.trim();
+
+  if (!name || !email || !message) {
+    toast.error(<div>
+      <h3 className='font-normal text-lg'>Error</h3>
+      <p className='font-normal text-sm'>Please fill in all the fields before submitting the form.</p>
+    </div>, {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      style: { backgroundColor: '#DC3E42', color: '#fff', width: '391px' },
+    });
+    return;
+  }
     setLoading(true)
 
      emailjs
@@ -110,13 +130,13 @@ const ContactForm = () => {
               <p className='font-normal text-base pb-4 text-playground-color'>Connect with me</p>
             </div>
             <div className="flex flex-row md:justify-between gap-x-4 md:gap-x-8 w-full">
-                <a href='' className="inline-flex items-center font-normal text-base gap-3">
+                <a href='https://www.dribbble.com/oteetee' target='_blank' className="inline-flex items-center font-normal text-base gap-3">
                     <img className="w-6 h-6" src={DribbleIcon} alt="" /> Dribbble
                 </a>
-                <a href='https://www.linkedin.com/in/arigbe-titi-26804815a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' className="inline-flex items-center font-normal text-base gap-3">
+                <a href='https://www.linkedin.com/in/arigbe-titi-26804815a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' target='_blank' className="inline-flex items-center font-normal text-base gap-3">
                     <img className="w-6 h-6" src={LinkedInIcon} alt="" /> LinkedIn
                 </a>
-                <a href='https://www.instagram.com/logic_mafia?igsh=MWxuZnZ5NnJhOWs3bQ%3D%3D&utm_source=qr' className="inline-flex items-center font-normal text-base gap-3">
+                <a href='https://www.instagram.com/logic_mafia?igsh=MWxuZnZ5NnJhOWs3bQ%3D%3D&utm_source=qr' target='_blank' className="inline-flex items-center font-normal text-base gap-3">
                     <img className="w-6 h-6" src={InstagramIcon} alt="" /> Instagram
                 </a>
             </div>

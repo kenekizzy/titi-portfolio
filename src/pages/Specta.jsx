@@ -448,7 +448,7 @@ const Specta = () => {
                   meetings with the stakeholders to present the prototype, to ensure all the expected requirements are met and ensure an effective feedback process.</p>
                 <div className='p-8 bg-white flex flex-col items-center rounded-lg my-4'>
                   <img src={spctaHifi} alt="" />
-                  <a href='https://www.spcta.green' className='flex justify-center text-center items-center mt-4 py-3 px-0 md:px-5 font-workSans bg-live-button text-white border-none rounded-lg gap-0 w-full md:w-[250px] md:gap-2'>View Live Website <span><img src={Rocket} alt="" className='ml-2'/></span></a>
+                  <a href='https://www.spcta.green' target='_blank' className='flex justify-center text-center items-center mt-4 py-3 px-0 md:px-5 font-workSans bg-live-button text-white border-none rounded-lg gap-0 w-full md:w-[250px] md:gap-2'>View Live Website <span><img src={Rocket} alt="" className='ml-2'/></span></a>
                 </div>
               </div>
 

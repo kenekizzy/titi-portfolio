@@ -315,7 +315,7 @@ const AqualinaPage = () => {
                   <p className='font-normal text-lg md:text-xl font-nb mb-4 leading-8 md:leading-9'>After creating the wireframes, I moved on to create the high-fidelity designs on Figma as well as prototype. I ensured I carried the stakeholders along during this process by scheduling a meeting bi-weekly after each  expected deliverable, this allowed for a fast feedback process. After each presentation, based off feedback from the stakeholders and product manager I iterated the designs and continued the feedback process until the stakeholders were satisfied with the deliverables.</p>
                   <div className='p-8 bg-white flex flex-col items-center rounded-lg my-4'>
                     <img src={aqualinaHifi} alt="" />
-                    <a href='https://aqualinabeachhouse.com' className='flex justify-center text-center items-center py-3 px-0 md:px-5 font-workSans bg-live-button text-white border-none rounded-lg gap-0 w-full md:w-[250px] md:gap-2'>View Live Website <span><img src={Rocket} alt="" className='ml-2'/></span></a>
+                    <a href='https://aqualinabeachhouse.com' target='_blank' className='flex justify-center text-center items-center py-3 px-0 md:px-5 font-workSans bg-live-button text-white border-none rounded-lg gap-0 w-full md:w-[250px] md:gap-2'>View Live Website <span><img src={Rocket} alt="" className='ml-2'/></span></a>
                   </div>
                 </div>
 
