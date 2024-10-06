@@ -71,7 +71,7 @@ import universeIcon from '../assets/icons/crescent-moon.svg'
 
         </div>
         <div className="button-section">
-          <Link to='/playground' className="view-button font-workSans">View all</Link>
+          <Link to='playground' preventScrollReset={false} className="view-button font-workSans">View all</Link>
         </div>
       </div>
     </div>

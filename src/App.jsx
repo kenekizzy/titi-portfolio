@@ -6,6 +6,7 @@ import ProjectPage from './pages/ProjectPage'
 import PlaygroundPage from './pages/PlaygroundPage'
 import ProjectRouteHandler from './components/ProjectRouteHandler'
 import Contact from './pages/Contact'
+import ScrollToTop from './components/ScrollToTop'
 import './App.css'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -19,6 +20,7 @@ function App() {
         <div className='bg-card bg-no-repeat bg-cover'>
           <ToastContainer />
           <Navbar />
+          <ScrollToTop />
           <Routes>
             <Route path='/' element={<Home />}/>
             <Route path='/about' element={<About />}/>
