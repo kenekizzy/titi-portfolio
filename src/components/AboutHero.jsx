@@ -18,7 +18,7 @@ const AboutHero = () => {
               When I'm not crafting pixel-perfect interfaces or deep-diving into user research, you'll find me exploring the latest design trends or collaborating with cross-functional teams to bring innovative ideas to life.
               Outside of design, I'm an avid learner, always eager to pick up new skills or perspectives. I love losing myself in a good book, experimenting with new recipes in the kitchen, and occasionally trying my hand at digital illustration. </p>
               <div className='flex flex-col space-y-6 md:space-y-0 md:flex-row md:justify-start space-x-0 md:space-x-4 py-10'>
-                  <a href="/src/assets/images/titi-resume.pdf"  download="Resume.pdf" className='flex justify-center items-center py-3 px-5 font-workSans bg-secondaryButton text-hero-secondaryButton border-none rounded-lg gap-2 w-full md:w-[250px]'>Download Resume <span><img src={DownloadIcon} alt="" /></span></a>
+                  <a href="/titi-resume.pdf"  download="Resume.pdf" className='flex justify-center items-center py-3 px-5 font-workSans bg-secondaryButton text-hero-secondaryButton border-none rounded-lg gap-2 w-full md:w-[250px]'>Download Resume <span><img src={DownloadIcon} alt="" /></span></a>
                   <button className='flex justify-center items-center py-3 px-5 font-workSans bg-primaryButton text-white border-none rounded-lg gap-2 w-full md:w-[250px]'>Get in touch <span><img src={Rocket} alt="" /></span></button>
               </div>
           </div>
